@@ -1,0 +1,119 @@
+body {
+    background-color: #232323;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a code {
+    font-size: 25px;
+    color: red;
+}
+
+.flexleft {
+    display: flex;
+}
+
+.flexright {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.h1left {
+    text-align: left;
+}
+
+.h1right {
+    text-align: right;
+}
+
+.obraz {
+    text-align: left;
+    height: 315px;
+    width: 560px;  
+    display: table;
+    color: white;
+}
+
+.film1, .film2 {
+    margin: 30px;
+    color: white;
+}
+
+.film1 {
+    text-align: left;
+}
+
+.film2 {
+    text-align: right;  
+}
+
+.logo {
+    height: 30%;
+    width: 30%;
+}
+
+footer {
+    padding: 20px;
+}
+
+div a {
+    background-color: #232323;
+    font-size: 20px;
+    margin: 20px;
+}
+
+footer, a {
+    background-color: black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: font-size 1s;
+}
+
+h1 {
+    font-weight: normal;
+    display: inline-block;
+    transition: font-size 1s;
+}
+
+footer a:hover {
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
+@keyframes test {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:-100px;}
+    75%  {background-color:green; left:0px; top:-100px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes test2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25% {background-color:yellow; left:250px; top:-250px;}
+    50% {background-color:blue; left:0px; top:0px;} 
+    75% {background-color:green; left:250px; top:-250px;}
+    100%   {background-color:red; left:0px; top:0px;}
+       
+}  
+
+@keyframes text1 {
+    0%   {font-size: 40px;}
+    100%   {font-size: 55px;}
+}
+
+h1:hover {   
+    font-size: 55px;
+    transition: font-size 1s;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: test2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
