@@ -34,6 +34,12 @@ a code {
     color: white;
 }
 
+.obraz1 {
+    text-align: left;
+    display: table;
+    color: white;
+}
+
 .film1, .film2 {
     margin: 30px;
     color: white;
