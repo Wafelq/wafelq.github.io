@@ -38,6 +38,8 @@ a code {
     text-align: left;
     display: table;
     color: white;
+    height: 50%;
+    width: 50%;
 }
 
 .film1, .film2 {
