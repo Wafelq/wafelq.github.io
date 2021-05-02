@@ -37,9 +37,8 @@ a code {
 .obraz1 {
     text-align: left;
     display: table;
-    color: white;
-    height: 50%;
-    width: 50%;
+    height: 20%;
+    width: 20%;
 }
 
 .film1, .film2 {
