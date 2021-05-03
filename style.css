@@ -9,7 +9,10 @@ a code {
     color: red;
 }
 
-
+a link {
+    text-decoration: none;
+    color: cadetblue;
+}
 
 .flexleft {
     display: flex;
