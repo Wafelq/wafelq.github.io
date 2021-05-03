@@ -9,6 +9,8 @@ a code {
     color: red;
 }
 
+
+
 .flexleft {
     display: flex;
 }
@@ -37,8 +39,8 @@ a code {
 .obraz1 {
     text-align: left;
     display: table;
-    height: 25%;
-    width: 25%;
+    height: 35%;
+    width: 35%;
 }
 
 .film1, .film2 {
