@@ -91,6 +91,7 @@ h1 {
 footer a:hover {
     font-size: 25px;
     transition: font-size 1s;
+    color: cornflowerblue;
 }
 
 @keyframes test {
