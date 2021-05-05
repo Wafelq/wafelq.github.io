@@ -89,7 +89,7 @@ h1 {
     transition: font-size 1s;
 }
 
-footer a:hover {
+footer, a:hover {
     font-size: 25px;
     transition: font-size 1s;
     transition: color 1s;
