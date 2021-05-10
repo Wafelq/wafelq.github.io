@@ -59,6 +59,11 @@ a link {
     text-align: right;  
 }
 
+.mini {
+    height: 10%;
+    width: 10%;
+}
+
 .logo {
     height: 30%;
     width: 30%;
