@@ -1,3 +1,8 @@
+* {
+    color: white;
+    text-decoration: none;
+}
+
 body {
     background-color: #232323;
     font-family: Arial, Helvetica, sans-serif;
@@ -7,11 +12,6 @@ body {
 a code {
     font-size: 25px;
     color: red;
-}
-
-a link {
-    text-decoration: none;
-    color: cadetblue;
 }
 
 .flexleft {
