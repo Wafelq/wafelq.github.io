@@ -77,7 +77,22 @@ div, a {
     background-color: #232323;
     font-size: 20px;
 /* to psuje troche skalowanie linku ale trza sie z tym pierdolić */
-    margin: 20px;
+    /* margin: 20px; */
+}
+
+h1 {
+    font-weight: normal;
+    display: inline-block;
+    transition: font-size 1s;
+}
+
+.ytCOLOR {
+    transition: color 1s;
+}
+
+.ytCOLOR:hover {
+    transition: color 1s;
+    color: tomato;
 }
 
 footer, a {
@@ -85,12 +100,6 @@ footer, a {
     text-align: center;
     color: white;
     text-decoration: none;
-    transition: font-size 1s;
-}
-
-h1 {
-    font-weight: normal;
-    display: inline-block;
     transition: font-size 1s;
 }
 
