@@ -1,6 +1,5 @@
 * {
     color: white;
-    text-decoration: none;
 }
 
 body {
@@ -74,7 +73,7 @@ footer {
 }
 
 div, a {
-    background-color: #232323;
+    /* background-color: #232323; */
     font-size: 20px;
 /* to psuje troche skalowanie linku ale trza sie z tym pierdolić */
     /* margin: 20px; */
