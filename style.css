@@ -13,6 +13,10 @@ a code {
     color: red;
 }
 
+.srodek {
+    text-align: center;
+}
+
 .flexleft {
     display: flex;
 }
