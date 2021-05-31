@@ -87,15 +87,17 @@ h1 {
 }
 
 .ytCOLOR {
-    transition: color 1s;
+    transition: color 1s, font-size 1s;
 }
 
 .ytCOLOR:hover {
-    transition: color 1s;
+    transition: color 1s, font-size 1s;
+    font-size: 25px; 
     color: tomato;
 }
 
-footer, a {
+footer a {
+    background: black;
     text-align: center;
     color: white;
     text-decoration: none;
