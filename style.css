@@ -86,8 +86,12 @@ h1 {
     transition: font-size 1s;
 }
 
-footer a {
+footer {
     background-color: black;
+    padding: 20px;
+}
+
+footer a {
     text-align: center;
     color: white;
     text-decoration: none;
