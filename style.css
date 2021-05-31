@@ -86,27 +86,18 @@ h1 {
     transition: font-size 1s;
 }
 
-.ytCOLOR {
-    transition: color 1s, font-size 1s;
-}
-
-.ytCOLOR:hover {
-    transition: color 1s, font-size 1s;
-    font-size: 25px; 
-    color: tomato;
-}
-
 footer a {
     background-color: black;
     text-align: center;
     color: white;
     text-decoration: none;
-    transition: font-size 1s;
+    transition: color 0.5s, font-size 1s;
 }
 
 footer a:hover {
     font-size: 25px; 
-    transition: font-size 1s;
+    transition: color 0.5s, font-size 1s;
+    color: tomato;
 }
 
 @keyframes test {
