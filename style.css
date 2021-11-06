@@ -42,7 +42,7 @@ div image {
     }
 }
 
-@media only screen and (max-width: 801px) {
+@media only screen and (max-width: 901px) {
     .articletext {
         padding: 0;
         overflow: hidden;
@@ -50,7 +50,7 @@ div image {
 }
 
   /* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 901px) {
     .logo {
         height: 65%;
         width: 65%;
