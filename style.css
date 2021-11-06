@@ -44,16 +44,16 @@ div image {
 
 @media only screen and (max-width: 801px) {
     .articletext {
-        padding: 10 18px;
+        padding: 0;
         overflow: hidden;
     }
 }
 
   /* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1201px) {
     .logo {
-        height: 65%;
-        width: 65%;
+        height: 25%;
+        width: 25%;
     }
 }
 
