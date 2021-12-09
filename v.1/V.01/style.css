@@ -1,0 +1,147 @@
+* {
+    color: white;
+}
+
+body {
+    background: #232323;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a code {
+    font-size: 25px;
+    color: red;
+}
+
+.srodek {
+    text-align: center;
+    font-size: 100px;
+}
+
+.flexleft {
+    display: flex;
+}
+
+.flexright {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.h1left {
+    text-align: left;
+}
+
+.h1right {
+    text-align: right;
+}
+
+.obraz {
+    text-align: left;
+    height: 315px;
+    width: 560px;  
+    display: table;
+    color: white;
+}
+
+.obraz1 {
+    text-align: left;
+    display: table;
+    height: 35%;
+    width: 35%;
+}
+
+.film1, .film2 {
+    margin: 30px;
+    color: white;
+}
+
+.film1 {
+    text-align: left;
+}
+
+.film2 {
+    text-align: right;  
+}
+
+.mini {
+    height: 200px;
+    width: 200px;
+}
+
+.logo {
+    height: 30%;
+    width: 30%;
+}
+
+article {
+    padding: 10px;
+}
+
+div, a {
+    /* background-color: #232323; */
+    font-size: 20px;
+/* to psuje troche skalowanie linku ale trza sie z tym pierdolić */
+    /* margin: 20px; */
+}
+
+h1 {
+    font-weight: normal;
+    display: inline-block;
+    transition: font-size 1s;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+footer a {
+    background-color: black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s, font-size 1s;
+}
+
+footer a:hover {
+    font-size: 25px; 
+    transition: color 0.5s, font-size 1s;
+    color: tomato;
+}
+
+@keyframes test {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:-100px;}
+    75%  {background-color:green; left:0px; top:-100px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes test2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25% {background-color:yellow; left:250px; top:-250px;}
+    50% {background-color:blue; left:0px; top:0px;} 
+    75% {background-color:green; left:250px; top:-250px;}
+    100%   {background-color:red; left:0px; top:0px;}
+       
+}  
+
+@keyframes text1 {
+    0%   {font-size: 40px;}
+    100%   {font-size: 55px;}
+}
+
+h1:hover {   
+    font-size: 55px;
+    transition: font-size 1s;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: test2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
