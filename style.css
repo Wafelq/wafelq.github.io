@@ -39,6 +39,10 @@ a{
     color:#17a2b8;
 }
 
+.link_bigger{
+    font-size: 20px;
+}
+
 ul{
     list-style: none;
 }
@@ -300,6 +304,7 @@ h6 {font-size: 16px;}
 }
 
 .post{
+    border-radius: 15px;
     border: 1px solid var(--borderColor);
     -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -330,10 +335,10 @@ h6 {font-size: 16px;}
 
 #contact-form{
 	display: block;
-	max-width: 600px;
+	max-width: 400px;
 	margin: 0 auto;
 	border: 1px solid var(--borderColor);
-	padding: 15px;
+	padding: 5px;
 	border-radius: 5px;
 	background-color: var(--mainColor);
 	margin-bottom: 50px;
@@ -389,3 +394,7 @@ h6 {font-size: 16px;}
         justify-content: center;
     }
 }
+
+/*
+
+*/
