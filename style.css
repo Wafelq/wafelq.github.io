@@ -333,12 +333,24 @@ h6 {font-size: 16px;}
     font-size: 14px;
 }
 
-#contact-form{
+#contact-social-form{
 	display: block;
 	max-width: 400px;
 	margin: 0 auto;
 	border: 1px solid var(--borderColor);
 	padding: 5px;
+	border-radius: 5px;
+	background-color: var(--mainColor);
+	margin-bottom: 50px;
+
+}
+
+#contact-form{
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	border: 1px solid var(--borderColor);
+	padding: 15px;
 	border-radius: 5px;
 	background-color: var(--mainColor);
 	margin-bottom: 50px;
@@ -393,6 +405,10 @@ h6 {font-size: 16px;}
     .right-column{
         justify-content: center;
     }
+}
+
+.img-container{
+    width: 25%;
 }
 
 /*
