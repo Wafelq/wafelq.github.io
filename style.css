@@ -393,6 +393,10 @@ h6 {font-size: 16px;}
 }
 
 @media screen and (max-width: 800px) {
+    h1 {
+        font-size: 35px;
+    }
+
     .intro-wrapper{
         grid-template-columns: 1fr;
         grid-template-areas: 
