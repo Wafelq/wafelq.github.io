@@ -8,8 +8,19 @@ body * {
 }
 
 .placeholder {
-  width: 14px;
-  height: 14px;
+  width: 192px;
+  padding: 10px;
+  border-radius: 15%;
+}
+
+.bruh {
+  padding-top: 30px;
+}
+
+.bruh1 {
+  display: flexbox;
+
+
 }
 
 h1,
@@ -33,7 +44,8 @@ textarea {
   font-family: "Roboto Mono", monospace;
   color: lightslategray;
   text-decoration: none;
-  padding: 5px;
+  padding-inline: 5px;
+  padding-bottom: 30px;
 }
 
 a:hover {
@@ -61,7 +73,8 @@ h6 {
 }
 
 #container {
-  height: 10em;
+  width: 50%;
+  height: auto;
   position: relative;
   margin: 0;
   position: absolute;
@@ -100,6 +113,12 @@ h6 {
   svg{
     width: 12px;
     height: 12px;
+  }
+
+  .placeholder {
+    width: 150px;
+    padding: 5px;
+    border-radius: 15%;
   }
 
 /*
