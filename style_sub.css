@@ -13,11 +13,27 @@ body * {
   border-radius: 15%;
 }
 
-.bruh {
+#container_wide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_test {
+  line-height: 10em;
+}
+
+.placeholder_wide {
+  width: 300px;
+  height: 192px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.fake_footer {
   padding-top: 30px;
 }
 
-.bruh1 {
+.main_content {
   display: flexbox;
 }
 
@@ -47,7 +63,7 @@ textarea {
 }
 
 a:hover {
-    color: lightskyblue;
+  color: lightskyblue;
 }
 
 .title_left {
@@ -75,7 +91,7 @@ h6 {
 }
 
 #container {
-  width: 50%;
+  width: 80%;
   height: auto;
   position: relative;
   margin: 0;
@@ -85,8 +101,6 @@ h6 {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
-
 
 #container > div {
   text-align: center;
@@ -123,8 +137,17 @@ h6 {
     border-radius: 15%;
   }
 
+  .placeholder_wide {
+    width: 224px;
+    height: 144px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
   #container {
-    width: 90%;
+    width: 70%;
+    align-content: center;
+    padding-top: 50%;
   }
 
 
