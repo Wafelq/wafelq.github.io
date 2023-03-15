@@ -30,7 +30,7 @@ body * {
 }
 
 .fake_footer {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .main_content {
@@ -93,19 +93,15 @@ h6 {
 #container {
   width: 80%;
   height: auto;
-  position: relative;
-  margin: 0;
   position: absolute;
+  margin: 0;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
 
-#container > div {
-  text-align: center;
-  margin: -1em 0;
-}
+/* padding-top: 100% */
 
 @media screen and (max-width: 1200px) {
   .container {
@@ -126,7 +122,7 @@ h6 {
     font-size: 75%;
   }
 
-  svg{
+  svg {
     width: 12px;
     height: 12px;
   }
@@ -147,11 +143,19 @@ h6 {
   #container {
     width: 70%;
     align-content: center;
-    padding-top: 50%;
+    top: 70%;
   }
 
+  #container > div {
+    text-align: center;
+    margin: auto;
+  }
 
-/*
+  #container_wide {
+    height: 100px;
+  }
+
+  /*
   .intro-wrapper {
     grid-template-columns: 1fr;
     grid-template-areas:
