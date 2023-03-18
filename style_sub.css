@@ -164,10 +164,8 @@ h6 {
 
   #container_min {
     width: 80%;
-    height: auto;
-    position: absolute;
     margin: 0;
-    top: 210%;
+    top: 290%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
