@@ -24,7 +24,7 @@ body * {
 
 .placeholder_wide {
   width: 324px;
-  height: 184px;
+  height: 183px;
   padding: 10px;
   border-radius: 30px;
 }
@@ -101,6 +101,17 @@ h6 {
   transform: translate(-50%, -50%);
 }
 
+#container_min {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  margin: 0;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
 /* padding-top: 100% */
 
 @media screen and (max-width: 1200px) {
@@ -128,7 +139,7 @@ h6 {
   }
 
   .placeholder {
-    width: 150px;
+    width: 130px;
     padding: 5px;
     border-radius: 15%;
   }
@@ -141,9 +152,25 @@ h6 {
   }
 
   #container {
-    width: 70%;
-    align-content: center;
-    top: 70%;
+    width: 80%;
+    height: auto;
+    position: absolute;
+    margin: 0;
+    top: 100%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #container_min {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    margin: 0;
+    top: 210%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
 
   #container > div {
