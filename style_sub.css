@@ -42,6 +42,12 @@ body * {
   justify-content: left;
 }
 
+.main_content_min {
+  padding-inline: 50px;
+  display: block;
+  justify-content: left;
+}
+
 h1,
 h2,
 h3,
@@ -125,7 +131,7 @@ h6 {
 
   .placeholder {
     width: 130px;
-    padding: 5px;
+    padding: 3px;
     border-radius: 15%;
   }
 
@@ -140,9 +146,10 @@ h6 {
     height: 100px;
   }
   
-  .main_content {
-    display: grid;
-    justify-content: center;
+  .main_content_min {
+    display: block;
+    justify-content: space-evenly;
+    padding-inline: px;
   }
 
   #container_wide {
