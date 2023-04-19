@@ -10,12 +10,10 @@ body * {
 .placeholder {
   width: 192px;
   padding: 10px;
-  border-radius: 15%;
+  border-radius: 10%;
 }
 
-.bruh {
-  padding-top: 30px;
-}
+
 
 .bruh1 {
   display: flexbox;
@@ -42,8 +40,6 @@ textarea {
   font-family: "Roboto Mono", monospace;
   color: lightslategray;
   text-decoration: none;
-  padding-inline: 5px;
-  padding-bottom: 30px;
 }
 
 a:hover {
@@ -75,9 +71,8 @@ h6 {
 }
 
 #container {
-  width: 50%;
+  width: 30%;
   height: auto;
-  position: relative;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -86,11 +81,14 @@ h6 {
   transform: translate(-50%, -50%);
 }
 
-
+.fake_footer {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 #container > div {
   text-align: center;
-  margin: -1em 0;
+  margin: -2em 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -125,17 +123,20 @@ h6 {
 
   #container {
     width: 80%;
-  height: auto;
-  position: relative;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+    height: auto;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
 
-
+  .fake_footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
 /*
   .intro-wrapper {
     grid-template-columns: 1fr;

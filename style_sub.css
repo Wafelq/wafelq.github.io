@@ -14,6 +14,7 @@ body * {
 }
 
 #container_wide {
+  padding-inline: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -31,10 +32,14 @@ body * {
 
 .fake_footer {
   padding-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .main_content {
-  display: flexbox;
+  padding-inline: 50px;
+  display: block;
+  justify-content: left;
 }
 
 h1,
@@ -90,27 +95,7 @@ h6 {
   font-size: 16px;
 }
 
-#container {
-  width: 80%;
-  height: auto;
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
 
-#container_min {
-  width: 80%;
-  height: auto;
-  position: absolute;
-  margin: 0;
-  top: 80%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
 
 /* padding-top: 100% */
 
@@ -120,7 +105,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   h1 {
     font-size: 35px;
   }
@@ -151,34 +136,22 @@ h6 {
     border-radius: 30px;
   }
 
-  #container {
-    width: 80%;
-    height: auto;
-    position: absolute;
-    margin: 0;
-    top: 100%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+  #container_wide{
+    height: 100px;
   }
-
-  #container_min {
-    width: 80%;
-    margin: 0;
-    top: 290%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #container > div {
-    text-align: center;
-    margin: auto;
+  
+  .main_content {
+    display: grid;
+    justify-content: center;
   }
 
   #container_wide {
-    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
+
+ 
 
   /*
   .intro-wrapper {
