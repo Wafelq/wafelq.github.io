@@ -42,12 +42,6 @@ body * {
   justify-content: left;
 }
 
-.main_content_min {
-  padding-inline: 50px;
-  display: block;
-  justify-content: left;
-}
-
 h1,
 h2,
 h3,
@@ -146,10 +140,10 @@ h6 {
     height: 100px;
   }
   
-  .main_content_min {
-    display: block;
-    justify-content: space-evenly;
-    padding-inline: px;
+  .main_content {
+    padding-inline: 40px;
+    display: grid;
+    justify-content: center;
   }
 
   #container_wide {
