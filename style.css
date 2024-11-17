@@ -269,6 +269,11 @@ footer {
         max-width: 100px;
     }
 
+    #gallery h2 {
+        width: 70%;
+        border-radius: 90% 20%;
+    }
+
     section {
         padding: 15px;
     }
@@ -276,4 +281,34 @@ footer {
     #cennik th, #cennik td {
         font-size: 12px;
     }
+
+    #cennik {
+        width: 90%;
+    }
+
+    #kontakt {
+        width: 90%;
+    }
+
+    #o-nas {
+        width: 90%;
+        border-radius: 50% 90%;
+    }
+    
+    #o-nas h2 {
+        border-radius: 80% 10%;
+        background-color: var(--czornyZielony);
+    }
+
+    #uslugi {
+        width: 80%;
+        border-radius: 90% 10%;
+    }
+    
+    #uslugi h2 {
+        font-size: 36px;
+        width: 90%;
+        border-radius: 10% 90%;
+    }
+    
 }
