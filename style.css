@@ -1,153 +1,279 @@
-html,
-body {
-  background-color: #192734;
-}
-
-body * {
-  transition: 0.2s;
-}
-
-.placeholder {
-  width: 192px;
-  padding: 10px;
-  border-radius: 10%;
-}
-
-
-
-.bruh1 {
-  display: flexbox;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  font-family: "Baloo 2", cursive;
-  color: white;
-}
-
-a,
-p,
-li,
-span,
-label,
-input,
-textarea {
-  font-family: "Roboto Mono", monospace;
-  color: lightslategray;
-  text-decoration: none;
-}
-
-a:hover {
-    color: lightskyblue;
-}
-
-.title_left {
-  text-align: left;
-}
-
-h1 {
-  font-size: 56px;
-}
-h2 {
-  font-size: 36px;
-}
-h3 {
-  font-size: 28px;
-}
-h4 {
-  font-size: 24px;
-  color: lightslategray;
-}
-h5 {
-  font-size: 20px;
-}
-h6 {
-  font-size: 16px;
-}
-
-#container {
-  width: 30%;
-  height: auto;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.fake_footer {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#container > div {
-  text-align: center;
-  margin: -2em 0;
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 35px;
-  }
-
-  h4 {
-    font-size: 19px;
-  }
-
-  a {
-    font-size: 75%;
-  }
-
-  svg{
-    width: 12px;
-    height: 12px;
-  }
-
-  .placeholder {
-    width: 150px;
-    padding: 5px;
-    border-radius: 15%;
-  }
-
-  #container {
-    width: 80%;
-    height: auto;
-    position: relative;
+* {
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
 
-  .fake_footer {
+html {
+    scroll-behavior: smooth;
+}
+
+/* KOLORKI */
+:root{
+    --czornyZielony:#20221f;
+    --ciemnyZielony:#282c25;
+    --jasnyZielony: #2e352a;
+    --kolorStopki: #1a1818;
+    --ladnaCzcionka: Myriad Pro;
+}
+
+/* --------------- GŁOWA STRONY --------------- */
+
+header {
+    background-color:var(--ciemnyZielony);
+    color: #fff;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-evenly;
-  }
-/*
-  .intro-wrapper {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "nav-wrapper"
-      "left-column"
-      "right-column";
-  }
-
-  .right-column {
     justify-content: center;
-  }
-*/
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+} */
+
+.logo {
+    height: 60px; 
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    font-family: Myriad Pro;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color: #F9A03F;
+    transition: 0.3s;
+}
+
+/* --------------- CIAŁO STRONY --------------- */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--jasnyZielony);
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section h2 {
+    font-family: var(--ladnaCzcionka);
+    margin-bottom: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+section p {
+    color: #FFF;
+}
+
+
+/* --------------- STOPY --------------- */
+
+footer {
+    font-family: var(--ladnaCzcionka);
+    background-color: var(--kolorStopki);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* --------------- cennik ITP. --------------- */
+
+#cennik h2 {
+    width: 50%;
+    border-radius: 90% 50%;
+    background-color: var(--czornyZielony);
+}
+
+#cennik table {
+    width: 100%;
+}
+
+#cennik {
+    width: 30%;
+    border-radius: 50%;
+    font-family: var(--ladnaCzcionka);
+    color: #fff;
+    background-color: var(--kolorStopki);
+    border: 10px solid var(--jasnyZielony);
+    padding: 8px;
+    text-align: center;
+}
+
+#cennik th {
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--czornyZielony);
+}
+
+#cennik td {
+    border-radius: 10px;
+    font-family: var(--ladnaCzcionka);
+    color: #fff;
+    background-color: var(--ciemnyZielony);
+    padding: 5px;
+}
+
+/* --------------- kontakt i o nas --------------- */
+
+#kontakt {
+    width: 30%;
+    border-radius: 25px;
+    background-color: var(--czornyZielony);
+    text-align: center;
+}
+
+#uslugi {
+    width: 40%;
+    border-radius: 90% 10%;
+    background-color: var(--czornyZielony);
+}
+
+#uslugi h2 {
+    font-size: 36px;
+    width: 50%;
+    border-radius: 10% 90%;
+    background-color: var(--kolorStopki);
+}
+
+#uslugi img {
+    border: -10px solid var(--jasnyZielony);
+    border-radius: 15%;
+    width: 100%;
+    max-width: 150px;
+}
+
+#o-nas {
+    width: 30%;
+    border-radius: 50% 90%;
+    background-color: var(--ciemnyZielony);
+}
+
+#o-nas h2 {
+    border-radius: 90% 10%;
+    background-color: var(--czornyZielony);
+    text-align: left;
+    font-size: 36px;
+}
+
+/* --------------- galeria --------------- */
+
+#gallery h2 {
+    width: 40%;
+    border-radius: 90% 20%;
+    background-color: var(--czornyZielony);
+}
+
+.gallery {
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: var(--ciemnyZielony);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.gallery img {
+    border: -10px solid var(--ciemnyZielony);
+    border-radius: 15%;
+    width: 100%;
+    max-width: 150px;
+}
+
+/* --------------- RESPONSYWNOŚĆ POMOCY --------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    header h1 {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #cennik table {
+        font-size: 14px;
+    }
+
+    #cennik th, #cennik td {
+        padding: 6px;
+    }
+
+    .gallery img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 15px;
+    }
+
+    .gallery img {
+        max-width: 100px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #cennik th, #cennik td {
+        font-size: 12px;
+    }
 }
