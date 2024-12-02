@@ -1,0 +1,153 @@
+html,
+body {
+  background-color: #192734;
+}
+
+body * {
+  transition: 0.2s;
+}
+
+.placeholder {
+  width: 192px;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+
+
+.bruh1 {
+  display: flexbox;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "Baloo 2", cursive;
+  color: white;
+}
+
+a,
+p,
+li,
+span,
+label,
+input,
+textarea {
+  font-family: "Roboto Mono", monospace;
+  color: lightslategray;
+  text-decoration: none;
+}
+
+a:hover {
+    color: lightskyblue;
+}
+
+.title_left {
+  text-align: left;
+}
+
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+  color: lightslategray;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+
+#container {
+  width: 30%;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.fake_footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#container > div {
+  text-align: center;
+  margin: -2em 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h4 {
+    font-size: 19px;
+  }
+
+  a {
+    font-size: 75%;
+  }
+
+  svg{
+    width: 12px;
+    height: 12px;
+  }
+
+  .placeholder {
+    width: 150px;
+    padding: 5px;
+    border-radius: 15%;
+  }
+
+  #container {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fake_footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+/*
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+
+  .right-column {
+    justify-content: center;
+  }
+*/
+}
