@@ -54,7 +54,7 @@ span i {
 
 /* ==== Nagłówek ==== */
 .main-header {
-    padding-inline: 15%;
+    padding-inline: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +73,15 @@ span i {
 }
 .hero img {
     width:30%;
+}
+.main-header .logo{
+    margin: auto;
+    width: 30%;
+}
+
+.main-header .logo img{
+    padding-top: 10px;
+    width: 45%;
 }
 
 
@@ -170,33 +179,33 @@ span i {
     z-index: 2;
 }
 .side-nav {
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 0px 25px 25px 0px;
     position: fixed;
     left: -250px;
     top: 0;
     width: 250px;
     height: 100%;
-    background-color: #e74c3c;
+    background-color: #262626;
     padding-top: 10px;
     transition: 0.3s;
 }
 .side-nav a {
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     padding: 10px;
     color: white;
     text-decoration: none;
     text-align: center;
-    border-bottom: 2px solid #eaeaea;
+    border-bottom: 1px solid #313131;
 }
 .side-nav p {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     text-decoration: none;
     margin:0 auto;
 }
 .side-nav a:hover {
-    background-color: #b73c2f;
+    background-color: #1b1b1b;
 }
 .side-nav.open {
     left: 0;
@@ -235,7 +244,7 @@ span i {
     .header-top-bar {
         display: grid;
         padding-inline: 5%;
-        font-size: 15px;
+        font-size: 12px;
         justify-items: center;
         justify-content: space-evenly;
     }
