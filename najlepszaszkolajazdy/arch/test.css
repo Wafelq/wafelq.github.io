@@ -1,0 +1,55 @@
+body {
+    font-family: "Baloo 2", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+.hero {
+    background: url('https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png') center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero h1 {
+    font-size: 2em;
+    margin: -10px auto;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.container {
+    width: 60%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+.section-box {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+.footer a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+}

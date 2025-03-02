@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najlepsza Szkoła Jazdy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ============== BOCZNE MENU =================== -->
+
+    <button class="menu-button" onclick="toggleNav()">☰</button>
+
+    <nav class="side-nav" id="sideNav">
+        <a href="#home"><p>🏘️</p> Strona Główna</a>
+        <a href="#about"><p>🙋‍♂️</p> O Nas</a>
+        <a href="#location"><p>❓</p> Gdzie Jesteśmy?</a>
+        <a href="#schedule"><p>📅</p> Terminy</a>
+        <a href="#pricing"><p>💽</p> Opłaty</a>
+        <a href="#contact"><p>☎️</p> Kontakt</a>
+    </nav>
+
+    <!-- ============== GÓRA LOL =================== -->
+
+    <div class="header-top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/qH3q6a37zARHdDhr8">Ruda Śląska, ul. Mickiewicza 15</a></span>
+            <span><i class="fas fa-phone"></i><a> 123 456 789</a></span>
+        </div>
+        <div class="social-media">
+            <span><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/people/najlepszaszkolajazdypl/100059604371483/">Facebook </a></span>
+            <span><i class="fab fa-instagram"></i><a href="https://www.facebook.com/people/najlepszaszkolajazdypl/100059604371483/">Instagram </a></span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo"><img src="assets/img/logo" alt="Najlepsza Szkoła Jazdy"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Strona Główna</a></li>
+                <li><a href="#about">O Nas</a></li>
+                <li><a href="#location">Gdzie Jesteśmy?</a></li>
+                <li><a href="#schedule">Terminy</a></li>
+                <li><a href="#pricing">Opłaty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button class="menu-button" onclick="toggleNav()">☰</button>
+    <nav class="side-nav" id="sideNav">
+        <a href="#home">Strona Główna</a>
+        <a href="#about">O Nas</a>
+        <a href="#location">Gdzie Jesteśmy?</a>
+        <a href="#schedule">Terminy</a>
+        <a href="#pricing">Opłaty</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <!-- ================ INTRO STRONKI ================= -->
+    
+    <header class="hero">
+        <img src="assets/img/najlepsza_white.png">
+        
+        <p>Profesjonalne kursy nauki jazdy - zdaj egzamin za pierwszym razem!</p>
+
+        <a href="#contact" class="btn-primary">Zapisz się teraz</a>
+    </header>
+
+    <section id="home" class="section-box">
+        <h2>Najlepsza Szkoła Jazdy</h2>
+        <p>Nauka jazdy na najwyższym poziomie!</p>
+    </section>
+
+    <section id="gallery" class="section-box">
+        <h2>Galeria</h2>
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+    </section>
+
+    <!-- ================ st00pki ================= -->
+
+    <footer class="footer">
+        <p>Kontakt: <a href="tel:+48123456789">+48 123 456 789</a> | <a href="mailto:kontakt@szkolajazdy.pl">kontakt@szkolajazdy.pl</a></p>
+        <p>Znajdziesz nas na: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        <p>Design: <a href="#">Mateusz Hajduga</a></p>
+        <p>Właściciel: <a href="#"> Paweł Wójcik</a></p>
+    </footer>
+    
+    <script>
+        function toggleNav() {
+            let sideNav = document.getElementById("sideNav");
+            let overlay = document.getElementById("overlay");
+    
+            if (sideNav.classList.contains("open")) {
+                sideNav.classList.remove("open");
+                overlay.classList.remove("active");
+            } else {
+                sideNav.classList.add("open");
+                overlay.classList.add("active");
+            }
+        }
+    
+        // Zamknięcie menu po kliknięciu w overlay
+        document.getElementById("overlay").addEventListener("click", function () {
+            toggleNav();
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+    
+    <section id="about" class="section-box">
+        <h2>O Nas</h2>
+        <p>Jesteśmy doświadczoną szkołą jazdy, która pomoże Ci zdobyć prawo jazdy szybko i skutecznie.</p>
+    </section>
+    
+    <section id="location" class="section-box">
+        <h2>Gdzie Jesteśmy?</h2>
+        <p>Nasza szkoła znajduje się w centrum miasta. Zapraszamy do kontaktu!</p>
+    </section>
+    
+    <section id="schedule" class="section-box">
+        <h2>Terminy</h2>
+        <p>Oferujemy elastyczne terminy kursów dostosowane do Twojego grafiku.</p>
+    </section>
+    
+    <section id="pricing" class="section-box">
+        <h2>Opłaty</h2>
+        <p>Najlepsze ceny na rynku! Sprawdź naszą ofertę.</p>
+    </section>
+    
+    <section id="gallery" class="section-box">
+        <h2>Galeria</h2>
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+        <img src="https://www.uri.edu/wordpress/wp-content/uploads/home/sites/7/500x500.png" alt="Przykładowe zdjęcie">
+    </section>
+    
+    -->

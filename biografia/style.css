@@ -124,16 +124,6 @@ nav ul li a {
 a:hover {
     color: #FFD700; /* Kolor podświetlenia */
 }
-
-/* unvisited link */
-a:link {
-    color: white;
-}
-
-/* visited link */
-a:visited {
-    color: red;
-}
   
   /* selected link */
 a:active {
