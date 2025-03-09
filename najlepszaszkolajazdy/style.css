@@ -6,6 +6,27 @@ body {
     color: #333;
 }
 
+#home, #location, #gallery, #contact {
+    width: 40%;
+}
+@media screen and (max-width: 768px) {
+    #home, #location, #gallery, #contact {
+        width: 80%;
+    }
+}
+
+#calendar {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    #calendar {
+        width: 80%;
+    }
+    #calendar iframe {
+        width: 100%; 
+    }
+}
+
 .header-top-bar a:link{
     text-decoration: none; 
     color:white;
@@ -122,7 +143,7 @@ span i {
     width: 100%;
     height: 100%;
     /* background: url('https://oskelmak.pl/wp-content/uploads/2018/02/banner-osk-elmak-1.jpg') center/cover; */
-    background: url('https://www.szkola-jazdy.pl/wp-content/uploads/2018/05/575-1652-1.jpeg') center/cover; 
+    background: url('/assets/img/content/wuz_2.jpg') center/cover; 
     filter: brightness(50%);
     z-index: -1;
 }
@@ -164,6 +185,10 @@ span i {
     padding: 20px;
     max-width: 800px;
     text-align: center;
+}
+
+#contact p {
+    margin-bottom: -20px;
 }
 
 .section-box img {
