@@ -1,0 +1,247 @@
+/*
+Theme Name: Najlepsza Szkola Jazdy
+Theme URI: https://najlepszaszkolajazdy.pl
+Author: Twoje Imię
+Author URI: https://twojastrona.pl
+Description: Motyw WordPress dla szkoły jazdy.
+Version: 1.0
+*/
+
+body {
+    font-family: "Baloo 2", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+#home, #location, #gallery, #contact, #error, #archive, #single {
+    width: 40%;
+}
+@media screen and (max-width: 768px) {
+    #home, #location, #gallery, #contact, #error, #archive, #single {
+        width: 80%;
+    }
+}
+
+#calendar {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    #calendar {
+        width: 80%;
+    }
+    #calendar iframe {
+        width: 100%; 
+    }
+}
+
+.header-top-bar a {
+    text-decoration: none; 
+    color: white;
+}
+
+.header-top-bar a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.header-top-bar {
+    padding-inline: 200px;
+    color: white;
+    background-color: #222;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 15%;
+}
+.header-top-bar .contact-info span {
+    margin-right: 20px;
+}
+.header-top-bar .social-media a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+span i {
+    padding: 5px;
+}
+
+.main-header {
+    padding-inline: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.hero img {
+    width: 30%;
+}
+.main-header .logo {
+    margin: auto;
+    width: 30%;
+}
+.main-header .logo img {
+    padding-top: 10px;
+    width: 45%;
+}
+
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/content/wuz_2.jpg') center/cover;
+    filter: brightness(50%);
+    z-index: -1;
+}
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 0;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: -10px auto;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.section-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section-box {
+    font-size: 3em;
+}
+
+.content .post h1 {
+    font-size: 3em;
+}
+
+#single h1 {
+    font-size: 3em;
+}
+
+
+
+.side-nav {
+    border-radius: 0px 25px 25px 0px;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #262626;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+.side-nav a {
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #313131;
+}
+.side-nav a:hover {
+    background-color: #1b1b1b;
+}
+.side-nav.open {
+    left: 0;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Nakładka */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1;
+}
+
+/* Aktywna nakładka */
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+    .social-media {
+        display: none;
+    }
+    .header-top-bar {
+        display: grid;
+        padding-inline: 5%;
+        font-size: 12px;
+        justify-items: center;
+        justify-content: space-evenly;
+    }
+    .main-header {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero img {
+        width: 90%;
+    }
+}

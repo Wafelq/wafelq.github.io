@@ -25,6 +25,12 @@ a
   color: orange;
 }
 
+#bomba
+{
+  font-size: 30px;
+  text-align: center;
+}
+
 a:hover
 {
   color: blue;
