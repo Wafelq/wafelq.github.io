@@ -1,0 +1,119 @@
+/* ====== RETRO / WIN XP ====== */
+:root{
+  --xp-blue: #3a6ea5;
+  --xp-light: #e3edf9;
+  --xp-border: #7aa2d6;
+  --xp-gray: #ececec;
+}
+
+body{
+  margin:0;
+  font-family: Tahoma, Verdana, sans-serif;
+  background-image: url("img/kosmos.gif");
+  background-repeat: repeat;
+}
+
+/* ====== OKNO ====== */
+#container{
+  max-width: 1000px;
+  margin: 20px auto;
+  background: var(--xp-light);
+  border: 3px solid var(--xp-border);
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* ====== HEADER ====== */
+header{
+  background: linear-gradient(#5b9bd5, var(--xp-blue));
+  color: white;
+  padding: 15px;
+  font-size: 1.8em;
+  text-shadow: 1px 1px #000;
+}
+
+/* ====== NAV ====== */
+nav{
+  background: var(--xp-gray);
+  padding: 8px;
+  border-bottom: 2px solid var(--xp-border);
+}
+nav a{
+  margin-right: 15px;
+  font-weight: bold;
+  color: #003399;
+  text-decoration: none;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+
+/* ====== MAIN ====== */
+main{
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+/* ====== SIDEBAR ====== */
+#sidebar{
+  width:220px;
+  background:#fff;
+  border:2px solid var(--xp-border);
+  padding:10px;
+}
+#sidebar h3{
+  margin-top:0;
+}
+
+/* ====== CONTENT ====== */
+#content{
+  flex:1;
+  background:#fff;
+  border:2px solid var(--xp-border);
+  padding:15px;
+}
+
+/* ====== LISTA ====== */
+ul{
+  padding-left:20px;
+}
+li{
+  margin-bottom:6px;
+}
+.item-controls button{
+  font-size:0.8em;
+  margin-left:5px;
+}
+
+/* ====== FORM ====== */
+form{
+  background:#f0f0f0;
+  padding:10px;
+  border:2px inset #999;
+  margin-top:15px;
+}
+input, select, button{
+  width:100%;
+  margin-bottom:8px;
+  padding:6px;
+  font-family: Tahoma;
+}
+
+/* ====== FOOTER ====== */
+footer{
+  background: var(--xp-gray);
+  text-align:center;
+  padding:8px;
+  font-size:0.85em;
+  border-top:2px solid var(--xp-border);
+}
+
+/* ====== RESPONSYWNOŚĆ ====== */
+@media(max-width:768px){
+  main{
+    flex-direction:column;
+  }
+  #sidebar{
+    width:100%;
+  }
+}
