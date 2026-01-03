@@ -1,0 +1,178 @@
+/* ===== PALETA RETRO ===== */
+:root{
+  --green-dark: #003E1F;
+  --green-light: #e7f3ec;
+  --violet-dark: #545255;
+  --violet-light: #efe4f5;
+  --border: #383bc2;
+  --subheader: #038345;
+}
+
+/* ===== TŁO ===== */
+body{
+  margin:0;
+  font-family: Tahoma, Verdana, sans-serif;
+  background: radial-gradient(135deg, var(--green-light), var(--violet-light));
+  background: url("/assets/img/rybcie_3.gif");
+}
+
+/* ===== OKNO ===== */
+#container{
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  border: 3px solid var(--border);
+  box-shadow: 5px 5px 100px #6f8f7c;
+}
+
+/* ===== PASEK TYTUŁU ===== */
+header{
+  background: linear-gradient(to right, #aa076b, #61045f);
+  color: #f3fff9;
+  padding: 12px 16px;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+}
+
+/* ===== PODPASEK ===== */
+.subheader{
+  background: var(--subheader);
+  border-bottom: 2px solid var(--border);
+  padding: 8px 16px;
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+/* ===== WIN XP WINDOW BAR ===== */
+.window-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #245edb, #3a7bd5);
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 0.95em;
+  text-shadow: 1px 1px #000;
+}
+
+.window-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.win-icon{
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+}
+
+/* ===== BUTTONS ===== */
+.window-buttons{
+  display: flex;
+  gap: 4px;
+}
+
+.window-buttons .btn{
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  background: linear-gradient(#e6e6e6, #bdbdbd);
+  box-shadow: inset 1px 1px #fff;
+}
+
+.window-buttons .btn.close{
+  background: linear-gradient(#ff5c5c, #c80000);
+}
+
+.window-buttons .btn:hover{
+  filter: brightness(1.1);
+}
+
+/* ===== TREŚĆ ===== */
+article{
+  padding: 0px 25px 0px 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+  font-size: 1.05em;
+  color: #2a2a2a;
+}
+
+/* ===== SEKCJE ===== */
+.section-title{
+  margin-top: 35px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4em;
+  color: var(--violet-dark);
+  border-bottom: 2px dashed var(--green-dark);
+  padding-bottom: 4px;
+}
+
+img {
+  border-radius: 5%;
+}
+
+/* ===== OBRAZKI OPŁYWANE ===== */
+img.float-left{
+  float: left;
+  margin: 10px 20px 10px 0;
+  max-width: 260px;
+  border: 3px solid var(--green-dark);
+  background: #fff;
+}
+
+img.float-right{
+  float: right;
+  margin: 10px 0 10px 20px;
+  max-width: 260px;
+  border: 3px solid var(--violet-dark);
+  background: #fff;
+}
+
+/* ===== OBRAZEK CENTRALNY ===== */
+img.center{
+  display: block;
+  margin: 30px auto;
+  max-width: 80%;
+  border: 3px solid var(--border);
+  background: #fff;
+}
+
+/* ===== STOPKA ===== */
+footer{
+  background: #ddeee4;
+  border-top: 2px solid var(--border);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #355a48;
+}
+
+/* ===== RESPONSYWNOŚĆ ===== */
+@media(max-width: 700px){
+  img.float-left,
+  img.float-right{
+    float: none;
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+  }
+}
+
+/* ===== OPEN FILE ANIMATION ===== */
+@keyframes openWindow {
+  0% {
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+#container{
+  animation: openWindow 0.5s ease-out;
+}
