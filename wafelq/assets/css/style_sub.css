@@ -1,0 +1,170 @@
+html,
+body {
+  background-color: #192734;
+}
+
+body * {
+  transition: 0.2s;
+}
+
+.placeholder {
+  width: 192px;
+  padding: 10px;
+  border-radius: 15%;
+}
+
+#container_wide {
+  padding-inline: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_test {
+  line-height: 10em;
+}
+
+.placeholder_wide {
+  width: 324px;
+  height: 183px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.fake_footer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main_content {
+  padding-inline: 50px;
+  display: block;
+  justify-content: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "Baloo 2", cursive;
+  color: white;
+}
+
+a,
+p,
+li,
+span,
+label,
+input,
+textarea {
+  font-family: "Roboto Mono", monospace;
+  color: lightslategray;
+  text-decoration: none;
+  padding-inline: 5px;
+  padding-bottom: 30px;
+}
+
+a:hover {
+  color: lightskyblue;
+}
+
+.title_left {
+  text-align: left;
+}
+
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+  color: lightslategray;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+
+
+
+/* padding-top: 100% */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h4 {
+    font-size: 19px;
+  }
+
+  a {
+    font-size: 75%;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .placeholder {
+    width: 130px;
+    padding: 3px;
+    border-radius: 15%;
+  }
+
+  .placeholder_wide {
+    width: 269px;
+    height: 152px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
+  #container_wide{
+    height: 100px;
+  }
+  
+  .main_content {
+    padding-inline: 40px;
+    display: grid;
+    justify-content: center;
+  }
+
+  #container_wide {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+ 
+
+  /*
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+
+  .right-column {
+    justify-content: center;
+  }
+*/
+}
