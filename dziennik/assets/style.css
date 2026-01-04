@@ -8,7 +8,7 @@
 body{
   margin:0;
   font-family: Tahoma, sans-serif;
-  background: url("./assets/img/kosmos.gif");
+  background: url("./img/kosmos.gif");
 }
 
 /* OKNO */
@@ -17,7 +17,6 @@ body{
   margin: 20px auto;
   background: var(--green-light);
   border: 3px solid var(--border);
-  border-radius: 50px;
   box-shadow: 4px 4px 0 #000;
 }
 
