@@ -1,4 +1,4 @@
-// const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSVkZlOIa0g8uaOVMIgn6l3uRiBSs1y0xauosE2oSaZrDi8vG65dBt26bZ1R-LB00CvFNqszzM9DPjt/pub?output=csv";
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSVkZlOIa0g8uaOVMIgn6l3uRiBSs1y0xauosE2oSaZrDi8vG65dBt26bZ1R-LB00CvFNqszzM9DPjt/pub?output=csv";
 
 let entries = [];
 

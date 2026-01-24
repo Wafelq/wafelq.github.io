@@ -13,7 +13,7 @@ body{
   margin:0;
   font-family: Tahoma, Verdana, sans-serif;
   background: radial-gradient(135deg, var(--green-light), var(--violet-light));
-  background: url("./img/rybcie_3.gif");
+  background: url("./img/icons/gozdziki.gif");
 }
 
 /* ===== OKNO ===== */
@@ -98,6 +98,32 @@ article{
   line-height: 1.7;
   font-size: 1.05em;
   color: #2a2a2a;
+}
+
+/* ===== LISTY (UL / LI) ===== */
+article ul{
+  margin: 12px 0 18px 32px;   /* mniejsze odstępy góra/dół */
+  padding: 0;
+  list-style-type: square;   /* bardziej retro niż disc */
+}
+
+article li{
+  margin: 4px 0;             /* KLUCZ: mniejszy odstęp między punktami */
+  padding-left: 4px;
+  line-height: 1.55;
+}
+
+/* ===== LISTY A OBRAZKI FLOAT ===== */
+
+
+article ul{
+  background: #f5fbf8;
+  border: 1px dashed var(--green-dark);
+  padding: 10px 14px;
+}
+
+article li::marker{
+  color: var(--violet-dark);
 }
 
 /* ===== SEKCJE ===== */
