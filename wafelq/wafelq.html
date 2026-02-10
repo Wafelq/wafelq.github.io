@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wafelq</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons/program.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style_wafelq.css">
+</head>
+
+<body>
+    <script src="script_wafelq.js"></script>  
+
+    <div id="container">
+        <header class="window-bar">
+            <div class="window-left">
+                <img src="./assets/img/icons/program.ico" class="win-icon" alt="">
+                <span>Wafelq (work in progress)</span>
+            </div>
+
+            <div class="window-buttons">
+                <span class="btn min"></span>
+                <span class="btn max"></span>
+                <span class="btn close" onclick="pokazWszystko()"></span>
+            </div>
+        </header>
+
+
+        <div class="subheader">
+            <div class="window-left">
+                <a onclick="pokazFilmy()" id="pokazFilmy">Lista filmów</a>
+                <a onclick="pokazMuzyka()" id="pokazMuzyka">Muzyka</a>
+                <a onclick="pokazJedzonko()" id="pokazJedzonko">Jedzonko</a>
+                <a onclick="pokazArtysci()" id="pokazArtysci">Artyści</a>
+                <a onclick="pokazAktywnosci()" id="pokazAktywnosci">O mnie</a>
+                <a onclick="pokazHistoria()" id="pokazHistoria">Historia</a>
+                <!-- <a onclick="pokazWszystko()" id="pokazWszystko">Cofnij</a> -->
+            </div>
+        <!-- 📄 laurka_artystka.txt • 🥀 tylko do odczytu -->
+        </div>
+
+        <article>
+
+        <p>
+            <img src="./assets/img/post/wafel_pfp.png" class="float-right" alt="Ilustracja">
+            Hello, to krótka stronka poświęcona mnie (hehe), taki zbiór informacji o mnie jakby ktoś był ciekaw yeah.
+            Jeśli chciałbyś stworzyć coś podobnego, kod tej stronki jest public domain. Uzywajcie ile chcecie!
+        </p>
+
+        <p>
+            <a href="https://www.instagram.com/wafelq_/"><📸>Instagram</a>
+            <a href="https://www.youtube.com/@wafelq_/"><🛑>YouTube</a>
+            <a href="https://wafelq.github.io/dreams/dreams.html"><📀>Koncert zyczeń</a>
+            
+        </p>
+
+        
+        <section id="sekcja-filmy">
+            <h2 class="section-title">🎥 Ulubione filmy/seriale:</h2>
+            <ul>
+                <li>Forrest Gump</li>
+                <li>Madagaskar</li>
+                <li>Big Hero 6</li>
+                <li>Perfect Days</li>
+                <li>Piraci z karaibów (1-4)</li>
+                <li>Pingwiny z Madagaskaru (serial Nickelodeon)</li>
+            </ul>
+            Filmy do obejrzenia:
+            <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a>
+
+        </section>
+        <section id="sekcja-muzyka">
+            <h2 class="section-title">🎵 Muzyka:</h2>
+            <ul>
+                <li>C418</li>
+                <li>Aswrek</li>
+                <li>Jack Stauber</li>
+                <li>Republika</li>
+                <li>Obywatel G.C.</li>
+                <li>Robert Abazur</li>
+                <li>Lin-Manuel Miranda</li>
+                <li>Tom Rosenthal</li>
+                <li>Tatsuro Yamashita</li>
+                <li>Myslovitz</li>
+                <li>Paktofonika</li>
+                <li>Tyler, The Creator</li>
+                <li>Molchat Doma</li>
+                <li>TV Girl</li>
+                <li>The Smiths</li>
+                <li><s>Wilbur Soot</s></li>
+                <li><s>Taco Hemigway</s></li>
+            </ul>
+            Moja muzyka:
+            <a href="https://soundcloud.com/wafelq">soundcloud</a>
+        </section>
+
+        <section id="sekcja-artysci">
+            <h2 class="section-title">🎨 Inspiracje:</h2>
+            <ul>
+                <li>Zuzu</li>
+                <li>Yagi</li>
+                <li>Artygona</li>
+                <li>Inka</li>
+                <li>RyBcia</li>
+                <li>yodud</li>
+                <li>elliotisacoolguy</li>
+                <li>arhn.eu (DarkArchon)</li>
+                <li>Kacpir</li>
+                <li>Dry Creek Wrangler School</li>
+                <li>Graf</li>
+            </ul>
+        </section>
+
+        <section id="sekcja-jedzonko">
+            <h2 class="section-title">🥝 Jedzonko:</h2>
+            <ol>
+                <li>Pierogi z mięsem</li>
+                <li>Schabowy + Ziemniaki posztampfowane + Buraczki</li>
+                <li>Naleśniki</li>
+                <li>Racuchy z jabłkiem</li>
+                <li>Kurpiowski zurek</li>
+                <li>Kebab (kurczak + łagodny, fuck you chce czuć język)</li>
+                <li>Pizza (capricciosa)</li>
+                <li>HotDog (cebulka + ketchup + majonez)</li>
+                <li>Tosty (szynka + ser, do tego keczup zmieszany z majonezem/musztardą)</li>
+            </ol>
+
+            <h2 class="section-title">🧃 Pićko</h2>
+            <ol>
+                <li>Woda z filtra</li>
+                <li>Herbata (earl grey lipton) (2/3 łyzki cukru + cytryna)</li>
+                <li>Woda z sokiem malinowym</li>
+                <li>Sprite</li>
+                <li>Kawa inka</li>
+                <li>Piwo 0% Malinaz</li>
+            </ol>
+        </section>
+
+        <section id="sekcja-aktywnosci">
+            <h2 class="section-title">☎️ Ulubione gry:</h2>
+            <ol>
+                <li>Minecraft</li>
+                <li>Danganronpa</li>
+                <li>Psychonauts</li>
+                <li>Night in the woods</li>
+                <li>Pizza Tower</li>
+            </ol>
+
+            <h2 class="section-title">🏃‍♀️ Aktywności:</h2>
+            <ul>
+                <li>Bieganie (ok. 10-15km)</li>
+                <li>Górskie wycieczki (ok. 15-25km)</li>
+                <li>Podróże</li>
+            </ul>
+        </section>
+        <section id="sekcja-historia">
+            <h2 class="section-title">🚭 Historia:</h2>
+            Hello, jestem Mateusz. Urodzony 05.07.2006 r. <s>(podobno zaklinowałem się w kanale rodnym i musiano zrobić cesarke XD)</s> <br>
+
+        </section>
+
+        <h2 class="section-title">Dziękuję za przeczytanie!!</h2>
+        </article>
+
+        <footer>
+        🧇💽🚗 • Wafelq • 2026
+        </footer>
+    </div>
+</body>
+</html>
