@@ -25,142 +25,162 @@
             </div>
         </header>
 
+        <div class="content-layout">
+            <article id="main-content">
+                <div class="subheader">
+                    <div class="xp-toolbar">
+                        <button onclick="openSection('sekcja-filmy')" id="btn-filmy">🎥 Filmy</button>
+                        <button onclick="openSection('sekcja-muzyka')" id="btn-muzyka">🎵 Muzyka</button>
+                        <button onclick="openSection('sekcja-jedzonko')" id="btn-jedzonko">🥝 Fav stuff</button>
+                        <button onclick="openSection('sekcja-artysci')" id="btn-artysci">🎨 Artyści</button>
+                        <button onclick="openSection('sekcja-aktywnosci')" id="btn-aktywnosci">☎️ O mnie</button>
+                        <button onclick="openSection('sekcja-historia')" id="btn-historia">📜 Historia</button>
+                    </div>
+                </div>
+                <p>
+                    <img src="./assets/img/post/wafel_pfp.png" class="float-right" alt="Ilustracja">
+                    Hello, to krótka stronka poświęcona mnie (hehe), taki zbiór informacji o mnie jakby ktoś był ciekaw yeah.
+                    Jeśli chciałbyś stworzyć coś podobnego, kod tej stronki jest public domain. Uzywajcie ile chcecie!
+                </p>
 
-        <div class="subheader">
-            <div class="window-left">
-                <a onclick="pokazFilmy()" id="pokazFilmy">Lista filmów</a>
-                <a onclick="pokazMuzyka()" id="pokazMuzyka">Muzyka</a>
-                <a onclick="pokazJedzonko()" id="pokazJedzonko">Jedzonko</a>
-                <a onclick="pokazArtysci()" id="pokazArtysci">Artyści</a>
-                <a onclick="pokazAktywnosci()" id="pokazAktywnosci">O mnie</a>
-                <a onclick="pokazHistoria()" id="pokazHistoria">Historia</a>
-                <!-- <a onclick="pokazWszystko()" id="pokazWszystko">Cofnij</a> -->
-            </div>
-        <!-- 📄 laurka_artystka.txt • 🥀 tylko do odczytu -->
+                <p>
+                    <a href="https://www.instagram.com/wafelq_/"><📸>Instagram</a>
+                    <a href="https://www.youtube.com/@wafelq_/"><🛑>YouTube</a>
+                    <a href="https://wafelq.github.io/dreams/dreams.html"><📀>Koncert zyczeń</a>
+                    
+                </p>
+            </article>
         </div>
 
-        <article>
+        <div id="side-windows">
+            <div class="side-window" id="sekcja-filmy">
+                <div class="mini-window-bar">
+                    <span>🎥 Filmy</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🎥 Ulubione filmy/seriale:</h2>
+                    <ul>
+                        <li>Forrest Gump</li>
+                        <li>Madagaskar</li>
+                        <li>Big Hero 6</li>
+                        <li>Perfect Days</li>
+                        <li>Piraci z karaibów (1-4)</li>
+                        <li>Pingwiny z Madagaskaru (serial Nickelodeon)</li>
+                    </ul>
+                    Filmy do obejrzenia:
+                    <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a>
+                </div>
+            </div>
 
-        <p>
-            <img src="./assets/img/post/wafel_pfp.png" class="float-right" alt="Ilustracja">
-            Hello, to krótka stronka poświęcona mnie (hehe), taki zbiór informacji o mnie jakby ktoś był ciekaw yeah.
-            Jeśli chciałbyś stworzyć coś podobnego, kod tej stronki jest public domain. Uzywajcie ile chcecie!
-        </p>
+            <div class="side-window" id="sekcja-muzyka">
+                <div class="mini-window-bar">
+                    <span>🎵 Muzyka</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🎵 Muzyka:</h2>
+                    <ul>
+                        <li>C418</li>
+                        <li>Aswrek</li>
+                        <li>Jack Stauber</li>
+                        <li>Republika</li>
+                        <li>Obywatel G.C.</li>
+                        <li>Robert Abazur</li>
+                        <li>Lin-Manuel Miranda</li>
+                        <li>Tom Rosenthal</li>
+                        <li>Tatsuro Yamashita</li>
+                        <li>Myslovitz</li>
+                        <li>Paktofonika</li>
+                        <li>Tyler, The Creator</li>
+                        <li>Molchat Doma</li>
+                        <li>TV Girl</li>
+                        <li>The Smiths</li>
+                        <li><s>Wilbur Soot</s></li>
+                        <li><s>Taco Hemigway</s></li>
+                    </ul>
+                    Moja muzyka:
+                    <a href="https://soundcloud.com/wafelq">soundcloud</a>
+                </div>
+            </div>
 
-        <p>
-            <a href="https://www.instagram.com/wafelq_/"><📸>Instagram</a>
-            <a href="https://www.youtube.com/@wafelq_/"><🛑>YouTube</a>
-            <a href="https://wafelq.github.io/dreams/dreams.html"><📀>Koncert zyczeń</a>
-            
-        </p>
+            <div class="side-window" id="sekcja-artysci">
+                <div class="mini-window-bar">
+                    <span>🧇 Fav stuff</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">☎️ Ulubione gry:</h2>
+                    <ol>
+                        <li>Minecraft</li>
+                        <li>Danganronpa</li>
+                        <li>Psychonauts</li>
+                        <li>Night in the woods</li>
+                        <li>Pizza Tower</li>
+                    </ol>
+                    <h2 class="section-title">✨</h2>
+                    <ul>
+                        <li>Nie istnieje coś takiego jak system "karmy", księga hioba temu zaprzecza.</li>
+                    </ul>
+                </div>
+            </div>
 
-        
-        <section id="sekcja-filmy">
-            <h2 class="section-title">🎥 Ulubione filmy/seriale:</h2>
-            <ul>
-                <li>Forrest Gump</li>
-                <li>Madagaskar</li>
-                <li>Big Hero 6</li>
-                <li>Perfect Days</li>
-                <li>Piraci z karaibów (1-4)</li>
-                <li>Pingwiny z Madagaskaru (serial Nickelodeon)</li>
-            </ul>
-            Filmy do obejrzenia:
-            <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a>
+            <div class="side-window" id="sekcja-jedzonko">
+                <div class="mini-window-bar">
+                    <span>🎨 Artyści</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🎨 Inspiracje:</h2>
+                    <ul>
+                        <li>Zuzu</li>
+                        <li>Yagi</li>
+                        <li>Artygona</li>
+                        <li>Inka</li>
+                        <li>RyBcia</li>
+                        <li>yodud</li>
+                        <li>elliotisacoolguy</li>
+                        <li>arhn.eu (DarkArchon)</li>
+                        <li>Kacpir</li>
+                        <li>Dry Creek Wrangler School</li>
+                        <li>Graf</li>
+                    </ul>
+                </div>
+            </div>
 
-        </section>
-        <section id="sekcja-muzyka">
-            <h2 class="section-title">🎵 Muzyka:</h2>
-            <ul>
-                <li>C418</li>
-                <li>Aswrek</li>
-                <li>Jack Stauber</li>
-                <li>Republika</li>
-                <li>Obywatel G.C.</li>
-                <li>Robert Abazur</li>
-                <li>Lin-Manuel Miranda</li>
-                <li>Tom Rosenthal</li>
-                <li>Tatsuro Yamashita</li>
-                <li>Myslovitz</li>
-                <li>Paktofonika</li>
-                <li>Tyler, The Creator</li>
-                <li>Molchat Doma</li>
-                <li>TV Girl</li>
-                <li>The Smiths</li>
-                <li><s>Wilbur Soot</s></li>
-                <li><s>Taco Hemigway</s></li>
-            </ul>
-            Moja muzyka:
-            <a href="https://soundcloud.com/wafelq">soundcloud</a>
-        </section>
+            <div class="side-window" id="sekcja-aktywnosci">
+                <div class="mini-window-bar">
+                    <span>☎️ O mnie</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🏃‍♀️ Aktywności:</h2>
+                    <ul>
+                        <li>Bieganie (ok. 10-15km)</li>
+                        <li>Górskie wycieczki (ok. 15-25km)</li>
+                        <li>Podróże</li>
+                    </ul>
+                </div>
+            </div>
 
-        <section id="sekcja-artysci">
-            <h2 class="section-title">🎨 Inspiracje:</h2>
-            <ul>
-                <li>Zuzu</li>
-                <li>Yagi</li>
-                <li>Artygona</li>
-                <li>Inka</li>
-                <li>RyBcia</li>
-                <li>yodud</li>
-                <li>elliotisacoolguy</li>
-                <li>arhn.eu (DarkArchon)</li>
-                <li>Kacpir</li>
-                <li>Dry Creek Wrangler School</li>
-                <li>Graf</li>
-            </ul>
-        </section>
+            <div class="side-window" id="sekcja-historia">
+                <div class="mini-window-bar">
+                    <span>📜 Historia</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🚭 Historia:</h2>
+                    Hello, jestem Mateusz. Urodzony 05.07.2006 r. <s>(podobno zaklinowałem się w kanale rodnym i musiano zrobić cesarke XD)</s> <br>
 
-        <section id="sekcja-jedzonko">
-            <h2 class="section-title">🥝 Jedzonko:</h2>
-            <ol>
-                <li>Pierogi z mięsem</li>
-                <li>Schabowy + Ziemniaki posztampfowane + Buraczki</li>
-                <li>Naleśniki</li>
-                <li>Racuchy z jabłkiem</li>
-                <li>Kurpiowski zurek</li>
-                <li>Kebab (kurczak + łagodny, fuck you chce czuć język)</li>
-                <li>Pizza (capricciosa)</li>
-                <li>HotDog (cebulka + ketchup + majonez)</li>
-                <li>Tosty (szynka + ser, do tego keczup zmieszany z majonezem/musztardą)</li>
-            </ol>
+                    <h2>Ważne dla mnie</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-            <h2 class="section-title">🧃 Pićko</h2>
-            <ol>
-                <li>Woda z filtra</li>
-                <li>Herbata (earl grey lipton) (2/3 łyzki cukru + cytryna)</li>
-                <li>Woda z sokiem malinowym</li>
-                <li>Sprite</li>
-                <li>Kawa inka</li>
-                <li>Piwo 0% Malinaz</li>
-            </ol>
-        </section>
-
-        <section id="sekcja-aktywnosci">
-            <h2 class="section-title">☎️ Ulubione gry:</h2>
-            <ol>
-                <li>Minecraft</li>
-                <li>Danganronpa</li>
-                <li>Psychonauts</li>
-                <li>Night in the woods</li>
-                <li>Pizza Tower</li>
-            </ol>
-
-            <h2 class="section-title">🏃‍♀️ Aktywności:</h2>
-            <ul>
-                <li>Bieganie (ok. 10-15km)</li>
-                <li>Górskie wycieczki (ok. 15-25km)</li>
-                <li>Podróże</li>
-            </ul>
-        </section>
-        <section id="sekcja-historia">
-            <h2 class="section-title">🚭 Historia:</h2>
-            Hello, jestem Mateusz. Urodzony 05.07.2006 r. <s>(podobno zaklinowałem się w kanale rodnym i musiano zrobić cesarke XD)</s> <br>
-
-        </section>
-
-        <h2 class="section-title">Dziękuję za przeczytanie!!</h2>
-        </article>
+        <!-- <h2 class="section-title">Dziękuję za przeczytanie!!</h2> -->
 
         <footer>
         🧇💽🚗 • Wafelq • 2026

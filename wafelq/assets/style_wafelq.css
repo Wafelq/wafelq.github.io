@@ -23,7 +23,10 @@ body{
   background: #ffffff;
   border: 3px solid var(--border);
   box-shadow: 5px 5px 100px #6f8f7c;
+  position: relative; /* BARDZO WAŻNE */
+  overflow: visible;   /* pozwala oknom wychodzić */
 }
+
 
 /* ===== PASEK TYTUŁU ===== */
 header{
@@ -39,10 +42,15 @@ header{
 .subheader{
   background: var(--subheader);
   border-bottom: 2px solid var(--border);
-  padding: 8px 16px;
-  font-size: 0.9em;
+  padding: 3px 8px;
+  font-size: 0.82em;
   color: #ffffff;
 }
+
+.subheader *{
+  margin: 0;
+}
+
 
 .subheader a:hover{
   font-weight: bold;
@@ -204,6 +212,91 @@ footer{
 
 #container{
   animation: openWindow 0.5s ease-out;
+}
+
+/* ============================================= LAYOUT Z BOCZNYM OKNEM 18.02.2026 ============================================= */
+.content-layout{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+}
+
+#main-content{
+  flex: 1;
+}
+
+/* ===== OBSZAR NA OKNA ===== */
+#side-windows{
+  position: relative;
+  width: 0; /* NIE wpływa na layout */
+}
+
+.side-window{
+  position: absolute;
+  top: 20px;
+  right: -380px; /* pojawia się obok głównej kolumny */
+  width: 340px;
+  background: #fff;
+  border: 2px solid #245edb;
+  box-shadow: 4px 4px 0 #000;
+  display: none;
+  animation: openWindow 0.25s ease-out;
+}
+
+/* ===== PASEK MINI OKNA ===== */
+.mini-window-bar{
+  background: linear-gradient(to right, #245edb, #3a7bd5);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== PRZYCISK ZAMKNIĘCIA ===== */
+.mini-close{
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.mini-close:hover{
+  background: red;
+}
+
+/* ===== TREŚĆ OKNA ===== */
+.mini-content{
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* ===== XP TOOLBAR ===== */
+.xp-toolbar{
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.xp-toolbar button{
+  background: linear-gradient(#f3f3f3, #d6d6d6);
+  border: 1px solid #808080;
+  padding: 4px 10px;
+  font-family: Tahoma;
+  cursor: pointer;
+  box-shadow: inset 1px 1px #fff;
+}
+
+.xp-toolbar button:hover{
+  background: linear-gradient(#ffffff, #c9e3ff);
+}
+
+.xp-toolbar button.active{
+  background: linear-gradient(#3a7bd5, #245edb);
+  color: white;
+  border: 1px solid #0d3c91;
 }
 
 
