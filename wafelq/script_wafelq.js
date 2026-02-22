@@ -2,14 +2,14 @@ let zIndexCounter = 100;
 
 function openSection(id){
 
-    const windowEl = document.getElementById(id);
+    const win = document.getElementById(id);
 
-    windowEl.style.display = "block";
-    windowEl.style.zIndex = ++zIndexCounter;
+    win.style.display = "block";
+    win.style.zIndex = ++zIndexCounter;
 
-    makeDraggable(windowEl);
+    makeDraggable(win);
 
-    // Active button
+    // active button
     document.querySelectorAll(".xp-toolbar button")
       .forEach(b => b.classList.remove("active"));
 
@@ -17,40 +17,41 @@ function openSection(id){
     if(btn) btn.classList.add("active");
 }
 
-function closeWindow(closeBtn){
-    closeBtn.closest(".side-window").style.display = "none";
+function closeWindow(btn){
+    btn.closest(".side-window").style.display = "none";
 }
 
 function makeDraggable(el){
 
+    // jeśli mobile — nie rób drag
+    if(window.innerWidth <= 768){
+        return;
+    }
+
     const header = el.querySelector(".mini-window-bar");
 
-    let isDown = false;
     let offsetX = 0;
     let offsetY = 0;
+    let dragging = false;
 
     header.onmousedown = function(e){
-        isDown = true;
+        dragging = true;
+
+        offsetX = e.clientX - el.offsetLeft;
+        offsetY = e.clientY - el.offsetTop;
+
         el.style.zIndex = ++zIndexCounter;
 
-        const rect = el.getBoundingClientRect();
-        offsetX = e.clientX - rect.left;
-        offsetY = e.clientY - rect.top;
+        document.onmousemove = function(e){
+            if(!dragging) return;
 
-        document.body.style.userSelect = "none";
-    };
+            el.style.left = (e.clientX - offsetX) + "px";
+            el.style.top  = (e.clientY - offsetY) + "px";
+        };
 
-    document.onmousemove = function(e){
-        if(!isDown) return;
-
-        const containerRect = document.getElementById("container").getBoundingClientRect();
-
-        el.style.left = (e.clientX - containerRect.left - offsetX) + "px";
-        el.style.top  = (e.clientY - containerRect.top  - offsetY) + "px";
-    };
-
-    document.onmouseup = function(){
-        isDown = false;
-        document.body.style.userSelect = "auto";
+        document.onmouseup = function(){
+            dragging = false;
+            document.onmousemove = null;
+        };
     };
 }

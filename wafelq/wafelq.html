@@ -20,35 +20,36 @@
 
             <div class="window-buttons">
                 <span class="btn min"></span>
-                <span class="btn max"></span>
-                <span class="btn close" onclick="pokazWszystko()"></span>
+                <span class="btn max" onclick="openSection('sekcja-kimjestem')"></span>
+                <span class="btn close" onclick="openSection('sekcja-miesiac')"></span>
             </div>
         </header>
 
-        <div class="content-layout">
-            <article id="main-content">
-                <div class="subheader">
+        <div class="subheader">
                     <div class="xp-toolbar">
                         <button onclick="openSection('sekcja-filmy')" id="btn-filmy">🎥 Filmy</button>
                         <button onclick="openSection('sekcja-muzyka')" id="btn-muzyka">🎵 Muzyka</button>
-                        <button onclick="openSection('sekcja-jedzonko')" id="btn-jedzonko">🥝 Fav stuff</button>
+                        <button onclick="openSection('sekcja-jedzonko')" id="btn-jedzonko">🧇 Fav stuff</button>
                         <button onclick="openSection('sekcja-artysci')" id="btn-artysci">🎨 Artyści</button>
                         <button onclick="openSection('sekcja-aktywnosci')" id="btn-aktywnosci">☎️ O mnie</button>
                         <button onclick="openSection('sekcja-historia')" id="btn-historia">📜 Historia</button>
+                        <!-- <button onclick="openSection('sekcja-miesiac')" id="btn-miesiac">📅 Miesiac</button> -->
                     </div>
-                </div>
+            </div>
+
+        <div class="content-layout">
+            <article id="main-content">
                 <p>
                     <img src="./assets/img/post/wafel_pfp.png" class="float-right" alt="Ilustracja">
-                    Hello, to krótka stronka poświęcona mnie (hehe), taki zbiór informacji o mnie jakby ktoś był ciekaw yeah.
-                    Jeśli chciałbyś stworzyć coś podobnego, kod tej stronki jest public domain. Uzywajcie ile chcecie!
+                    Hello, to krótka stronka poświęcona mnie (hehe), taki zbiór informacji o mnie jakby ktoś był ciekaw... yeah.
+                    Pomagałem se <s>shitgpt</s> w tworzeniu tej stronki więc w zamian jest ona <b>public domain!</b>
                 </p>
 
                 <p>
-                    <a href="https://www.instagram.com/wafelq_/"><📸>Instagram</a>
-                    <a href="https://www.youtube.com/@wafelq_/"><🛑>YouTube</a>
-                    <a href="https://wafelq.github.io/dreams/dreams.html"><📀>Koncert zyczeń</a>
-                    
+                    Krótko o mnie: <br>Jestem <b>Mateusz</b> znany także jako <a href="https://www.youtube.com/@wafelq_">"Wafelq"</a>, mam 19 lat (05.07.2006 r.) tworze w internecie od ok. 8 lat, kocham art oraz cool stuff a jeszcze bardziej ludzi którzy go robią. Bardzo lubię <i>gry bideo</i>, muzykę oraz filmy, wszelkiego typu, bo tak mam ten pogląd że konsumuje to co uznam za fajne a nie ograniczam się do gatunków. Najbardziej kocham te niszowe i niezależne. 
                 </p>
+
+                <p>Strona jest póki co nieźle rozjebana, sorry, dopiero ją rozpisuje, będzie lepiej.</p>
             </article>
         </div>
 
@@ -62,11 +63,14 @@
                     <h2 class="section-title">🎥 Ulubione filmy/seriale:</h2>
                     <ul>
                         <li>Forrest Gump</li>
-                        <li>Madagaskar</li>
-                        <li>Big Hero 6</li>
                         <li>Perfect Days</li>
+                        <li>Auta (Disney Cars) <s>(głównie z sentymentu)</s></li>
                         <li>Piraci z karaibów (1-4)</li>
                         <li>Pingwiny z Madagaskaru (serial Nickelodeon)</li>
+                        <li>Madagaskar</li>
+                        <li>Big Hero 6</li>
+                        <li>My Neighbor Totoro</li>
+                        <li>bo burnham: inside</li>
                     </ul>
                     Filmy do obejrzenia:
                     <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a>
@@ -92,6 +96,7 @@
                         <li>Tatsuro Yamashita</li>
                         <li>Myslovitz</li>
                         <li>Paktofonika</li>
+                        <li>Chris Zabriskie</li>
                         <li>Tyler, The Creator</li>
                         <li>Molchat Doma</li>
                         <li>TV Girl</li>
@@ -104,28 +109,46 @@
                 </div>
             </div>
 
-            <div class="side-window" id="sekcja-artysci">
+            <div class="side-window" id="sekcja-jedzonko">
                 <div class="mini-window-bar">
                     <span>🧇 Fav stuff</span>
                     <span class="mini-close" onclick="closeWindow(this)">✕</span>
                 </div>
                 <div class="mini-content">
-                    <h2 class="section-title">☎️ Ulubione gry:</h2>
+                    <h2 class="section-title">🎮 Ulubione gry:</h2>
                     <ol>
                         <li>Minecraft</li>
-                        <li>Danganronpa</li>
+                        <li>Danganronpa (1-2)</li>
                         <li>Psychonauts</li>
                         <li>Night in the woods</li>
+                        <li>Tomadatchi Life (3DS)</li>
+                        <li>Helltaker</li>
+                        <li>Undertale</li>
+                        <li>Disney Cars: video game</li>
+                        <li>A Hat in Time</li>
+                        <li>Crazy Taxi</li>
                         <li>Pizza Tower</li>
+                        <li>Zuma Deluxe</li>
                     </ol>
-                    <h2 class="section-title">✨</h2>
-                    <ul>
-                        <li>Nie istnieje coś takiego jak system "karmy", księga hioba temu zaprzecza.</li>
-                    </ul>
+
+                    <h2 class="section-title">☎️ Do zagrania:</h2>
+                    <ol>
+                        <li>Wiedźmin 3</li>
+                        <li>Deltarune (wszystkie chaptery)</li>
+                        <li>GTA: San Andreas</li>
+                        <li>GTA: V</li>
+                        <li>Half Life</li>
+                        <li>Sonic Adventure 2</li>
+                        <li>Sonic Generations</li>
+                        <li>Persona 3 (Portable)</li>
+                        <li>Snake Pass</li>
+                        <li>✅ Tomadatchi Life (3DS)</li>
+                        <li>✅ Animal Crossing (3DS)</li>
+                    </ol>
                 </div>
             </div>
 
-            <div class="side-window" id="sekcja-jedzonko">
+            <div class="side-window" id="sekcja-artysci">
                 <div class="mini-window-bar">
                     <span>🎨 Artyści</span>
                     <span class="mini-close" onclick="closeWindow(this)">✕</span>
@@ -135,9 +158,9 @@
                     <ul>
                         <li>Zuzu</li>
                         <li>Yagi</li>
-                        <li>Artygona</li>
                         <li>Inka</li>
                         <li>RyBcia</li>
+                        <li>Artygona</li>      
                         <li>yodud</li>
                         <li>elliotisacoolguy</li>
                         <li>arhn.eu (DarkArchon)</li>
@@ -145,6 +168,7 @@
                         <li>Dry Creek Wrangler School</li>
                         <li>Graf</li>
                     </ul>
+                    <p>uwielbiam was wszystkich, za mało to pokazuje</p>
                 </div>
             </div>
 
@@ -170,13 +194,91 @@
                 </div>
                 <div class="mini-content">
                     <h2 class="section-title">🚭 Historia:</h2>
-                    Hello, jestem Mateusz. Urodzony 05.07.2006 r. <s>(podobno zaklinowałem się w kanale rodnym i musiano zrobić cesarke XD)</s> <br>
+                    Hello, jestem Mateusz. Urodzony 05.07.2006 r. <br>
 
-                    <h2>Ważne dla mnie</h2>
+                    <h2>✨</h2>
                     <ul>
+                        <li>Nie istnieje coś takiego jak system "karmy", księga hioba temu zaprzecza.</li>
                         <li></li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="side-window" id="sekcja-miesiac">
+                <div class="mini-window-bar">
+                    <span>📅 Miesiac</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <p>Wyglądam na narcyste a głęboko siebie nienawidze, praktycznie od zawsze.</p>
+
+                    <h2 class="section-title">🧭 LUTY = MIESIĄC STABILNOŚCI</h2>
+                    <p>Nie będę reagował impulsem. Będę wracał do równowagi szybciej.</p>
+
+                    <h2>✨ Zasady lutego:</h2>
+                    <ul>
+                        <li>Jeden (wiele) błąd(ów) mnie nie definiuje.</li>
+                        <li>Fala mija.</li>
+                        <li>Reaguję po regulacji, nie przed.</li>
+                        <li>Relacje są dodatkiem, nie fundamentem.</li>
+                        <li>Spokój jest siłą.</li>
+                        <li>Nie sprawdzam messengera, instagrama, twittera</li>
+                        <li>Nie jestem złym człowiekiem. (mam nadzieję)</li>
+                    </ul>
+
+                    <h2>✨ Cel:</h2>
+                    <ul>
+                        <li>mniej panikuje</li>
+                        <li>szybciej wychodzę z napięcia</li>
+                        <li>mniej analizuję</li>
+                        <li>bardziej ufam sobie</li>
+                        <li>mniej się nienawidzę</li>
+                        <li>CHCE BYĆ DOBRYM CZŁOWIEKIEM.</li>
+                    </ul>
+                
+                    <p>Codziennie min. (regulacja ciała)</p>
+                    <ul>
+                        <li>ruch 20–60 min</li>
+                        <li>ograniczone scrollowanie</li>
+                        <li>sen min. 7h</li>
+                        <li>zimny prysznic przy napięciu</li>
+                        <li>moje ciało = fundament głowy</li>
+                        <li>PRZESTAĆ BYĆ ŚMIECIEM I JUŻ NIKOGO NIE RANIĆ SWOJĄ GŁUPOTĄ</li>
+                    </ul>
+                    
+                    <h2>stuff</h2>
+                    <ul>
+                        <li>Nie rozwiązuje relacji gdy jestem w stresie</li>
+                        Nie:
+                        <li>wyjaśniam</li>
+                        <li>konfrontuję</li>
+                        <li>wysyłam emocjonalnych wiadomości</li>
+                        <li>analizuję Instagramów</li>
+                        Tylko i wyłącznie jak jestem spokojny.
+                    </ul>
+
+                    <h2>dzisiaj wróciłem do równowagi po:</h2>
+                    <ul>
+                        <li>spokoju i ciszy</li>
+                    </ul>
+
+                    <s>Nie wiem dlaczego Bóg mnie ciągle trzyma na tym świecie, skoro tylko ranie</s>
+                    <p>jestem kurwa atencjuszem, zabij się debilu, A. cię odetnie.</p>
+                    <p>Nie rób z siebie ofiary zjebie, masz za dobrze w życiu a jeszcze narzekasz</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom-toolbar">
+            <div class="bottom-left">
+                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">🌐 Znajdziesz mnie również tutaj:</marquee>
+            </div>
+
+            <div class="bottom-actions">
+                <a href="https://www.instagram.com/wafelq_/" target="_blank">📸 Instagram</a>
+                <a href="https://www.youtube.com/@wafelq_/" target="_blank">🛑 YouTube</a>
+                <a href="https://wafelq.github.io/dreams/dreams.html">📀 Koncert życzeń</a>
             </div>
         </div>
 

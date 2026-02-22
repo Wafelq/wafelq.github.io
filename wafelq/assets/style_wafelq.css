@@ -13,7 +13,7 @@ body{
   margin:0;
   font-family: Tahoma, Verdana, sans-serif;
   background: radial-gradient(135deg, var(--green-light), var(--violet-light));
-  background: url("./img/icons/tile_gif.gif");
+  background: url("./img/icons/kosmos.gif");
 }
 
 /* ===== OKNO ===== */
@@ -22,7 +22,7 @@ body{
   margin: 30px auto;
   background: #ffffff;
   border: 3px solid var(--border);
-  box-shadow: 5px 5px 100px #6f8f7c;
+  /* box-shadow: 1px 1px 50px #635cc2; */
   position: relative; /* BARDZO WAŻNE */
   overflow: visible;   /* pozwala oknom wychodzić */
 }
@@ -226,23 +226,19 @@ footer{
   flex: 1;
 }
 
-/* ===== OBSZAR NA OKNA ===== */
-#side-windows{
-  position: relative;
-  width: 0; /* NIE wpływa na layout */
-}
-
 .side-window{
-  position: absolute;
-  top: 20px;
-  right: -380px; /* pojawia się obok głównej kolumny */
+  position: fixed;
+  top: 120px;
+  left: 65%;
   width: 340px;
+
   background: #fff;
   border: 2px solid #245edb;
   box-shadow: 4px 4px 0 #000;
   display: none;
-  animation: openWindow 0.25s ease-out;
 }
+
+/*animation: openWindow 0.25s ease-out;*/
 
 /* ===== PASEK MINI OKNA ===== */
 .mini-window-bar{
@@ -300,3 +296,69 @@ footer{
 }
 
 
+/* ================================================================================== */
+
+/* ===== BOTTOM XP TOOLBAR ===== */
+.bottom-toolbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(#f3f3f3, #d6d6d6);
+  border-top: 2px solid #808080;
+  padding: 4px 10px;
+
+  font-family: Tahoma;
+  font-size: 0.85em;
+}
+
+.bottom-left{
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+.bottom-actions{
+  display: flex;
+  gap: 6px;
+}
+
+/* Przyciski jako <a> */
+.bottom-actions a{
+  text-decoration: none;
+  color: black;
+
+  background: linear-gradient(#ffffff, #dcdcdc);
+  border: 1px solid #808080;
+  padding: 3px 8px;
+
+  box-shadow: inset 1px 1px #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bottom-actions a:hover{
+  background: linear-gradient(#ffffff, #c9e3ff);
+}
+
+.bottom-actions a:active{
+  background: linear-gradient(#3a7bd5, #245edb);
+  color: white;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px){
+
+  .side-window{
+    position: fixed;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .mini-window-bar{
+    cursor: default; /* brak drag */
+  }
+}
