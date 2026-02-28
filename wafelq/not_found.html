@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wafelq</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons/program.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style_wafelq.css">
+</head>
+
+<body>
+    <script src="script_wafelq.js"></script>  
+
+    <div id="container">
+        <header class="window-bar">
+            <div class="window-left">
+                <img src="./assets/img/icons/program.ico" class="win-icon" alt="">
+                <span>Wafelq (work in progress)</span>
+            </div>
+
+            <div class="window-buttons">
+                <span class="btn min"></span>
+                <span class="btn max"></span>
+                <span class="btn close" onclick="window.open('index.html')"></span>
+            </div>
+        </header>
+
+        <div class="subheader">
+                    <div class="xp-toolbar">
+                        <button onclick="openSection('sekcja-wtf')" id="btn-filmy">😳 Why are you here?!</button>
+                        
+                    </div>
+            </div>
+
+        <div class="content-layout">
+            <article id="main-content">
+                <p>
+                    <img src="./assets/img/post/img_insta.jpg" class="float-left" alt="Ilustracja">
+                    Oops! Something went horribly wrong and the page was not found! <br><br>
+                    Most likely you clicked on dead link or tried to look for a subpage that doesn't exist 😨 <br><br>
+                    Click the red button on the right to go back to home page!
+                
+
+                </p>
+            </article>
+        </div>
+
+        <div id="side-windows">
+            <div class="side-window" id="sekcja-wtf">
+                <div class="mini-window-bar">
+                    <span>🙄 Okay, since you are THAT curious...</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">🤓 Here's my stuff:</h2>
+                    <ul>
+                        <li>I'm Wafelq</li>
+                        <li>19 y.o.</li>
+                        <li>The rest you can find on the homepage!!!</li>
+                        <br><br>
+                        <li>GET OUT!!</li>
+                    </ul>                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom-toolbar">
+            <div class="bottom-left">
+                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">🌐 You can also find me here:</marquee>
+            </div>
+
+            <div class="bottom-actions">
+                <a href="https://www.instagram.com/wafelq_/" target="_blank">📸 Instagram</a>
+                <a href="https://www.youtube.com/@wafelq_/" target="_blank">🛑 YouTube</a>
+                <a href="https://wafelq.github.io/dreams/dreams.html">📀 Dreams</a>
+            </div>
+        </div>
+
+        <!-- <h2 class="section-title">Dziękuję za przeczytanie!!</h2> -->
+
+        <footer>
+        🧇💽🚗 • Wafelq • 2026
+        </footer>
+    </div>
+</body>
+</html>
