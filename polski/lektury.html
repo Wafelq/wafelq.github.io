@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lektury</title>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script src="lektury.js"></script>
@@ -11,27 +12,38 @@
 
 <h1>Streszczenia lektur</h1>
 
-<input type="text" id="search" placeholder="Szukaj..." oninput="renderEntries()">
+<div class="topBar">
+  <input type="text" id="search" placeholder="Szukaj..." oninput="renderEntries()">
+  <button onclick="toggleDarkMode()">🌙</button>
+  <button onclick="randomEntry()">🎲</button>
+  <button onclick="resetFilters()">Reset</button>
+</div>
 
-<button onclick="toggleDarkMode()">Tryb nocny</button>
-<button onclick="randomEntry()">Losuj lekturę</button>
+<div class="filtersWrapper">
+  <div class="filters">
 
-<h2>Epoki</h2>
-<ul id="epochList"></ul>
+    <div class="filterBox">
+      <h3>Epoka</h3>
+      <div id="epokaFilters"></div>
+    </div>
 
-<h2>Filtr epoka</h2>
-<div id="epokaFilters"></div>
+    <div class="filterBox">
+      <h3>Dzieło</h3>
+      <div id="dzieloFilters"></div>
+    </div>
 
-<h2>Filtr dzieło</h2>
-<div id="dzieloFilters"></div>
+    <div class="filterBox">
+      <h3>Autor</h3>
+      <div id="autorFilters"></div>
+    </div>
 
-<h2>Filtr autor</h2>
-<div id="autorFilters"></div>
+  </div>
+</div>
 
 <hr>
 
 <div id="entries"></div>
 
-<script src="script.js"></script>
+
 </body>
 </html>

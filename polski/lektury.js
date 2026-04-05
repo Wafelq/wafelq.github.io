@@ -10,10 +10,9 @@ let activeFilters = {
 Papa.parse(SHEET_URL, {
   download: true,
   header: false,
-  complete: function(results) {
-
+    complete: function(results) {
     entries = results.data
-      .slice(1) // IGNORUJE PIERWSZY WIERSZ
+      .slice(1)
       .filter(row => row[0] && row[3])
       .map(row => ({
         epoka: row[0]?.trim() || "",
@@ -26,6 +25,7 @@ Papa.parse(SHEET_URL, {
     renderFilters();
     renderEpochList();
     renderEntries();
+    highlightActiveFilters();
   }
 });
 
@@ -44,10 +44,19 @@ function renderFilterGroup(elementId, key){
   values.forEach(v => {
     const btn = document.createElement("button");
     btn.textContent = v;
+
     btn.onclick = () => {
-      activeFilters[key] = v;
+      // JEŚLI JUŻ ZAZNACZONE → ODKLIKNIJ
+      if(activeFilters[key] === v){
+        activeFilters[key] = null;
+      } else {
+        activeFilters[key] = v;
+      }
       renderEntries();
+      highlightActiveFilters();
     };
+
+    btn.dataset.value = v;
     box.appendChild(btn);
   });
 }
@@ -75,8 +84,8 @@ function renderEntries(){
     div.innerHTML = `
       <h2>${e.dzielo}</h2>
       <div class="tags">
-        <span>${e.epoka}</span>
-        <span>${e.autor}</span>
+        <span><b>Epoka:</b> ${e.epoka}</span><br>
+        <span><b>Autor:</b> ${e.autor}</span>
       </div>
 
       <h3>Streszczenie</h3>
@@ -119,4 +128,36 @@ function randomEntry(){
 // TRYB NOCNY
 function toggleDarkMode(){
   document.body.classList.toggle("dark");
+}
+
+function highlightActiveFilters(){
+  ["epokaFilters","dzieloFilters","autorFilters"].forEach((id, index)=>{
+    const key = ["epoka","dzielo","autor"][index];
+    const box = document.getElementById(id);
+    const buttons = box.querySelectorAll("button");
+
+    buttons.forEach(btn=>{
+      if(btn.dataset.value === activeFilters[key]){
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  });
+}
+
+renderFilters();
+renderEpochList();
+renderEntries();
+highlightActiveFilters();
+
+function resetFilters(){
+  activeFilters = {
+    epoka: null,
+    dzielo: null,
+    autor: null
+  };
+  document.getElementById("search").value = "";
+  renderEntries();
+  highlightActiveFilters();
 }

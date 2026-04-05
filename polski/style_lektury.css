@@ -1,41 +1,177 @@
 body {
   font-family: Arial;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   background: #f5f5f5;
   color: #000;
+  padding: 10px;
 }
 
+/* TOP BAR */
+.topBar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background: #f5f5f5;
+  padding: 5px 0;
+  z-index: 10;
+}
+
+.topBar input {
+  flex: 4;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* FILTRY */
+.filtersWrapper {
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  min-width: 900px;
+}
+
+.filterBox {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 280px;
+}
+
+.filterBox button {
+  display: inline-block;
+  margin: 3px;
+  font-size: 13px;
+}
+
+/* PRZYCISKI */
+button {
+  margin: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #e0e0e0;
+  font-size: 13px;
+}
+
+button.active {
+  background: #333;
+  color: white;
+}
+
+/* WPISY */
+.entry {
+  background: white;
+  padding: 18px;
+  margin: 18px 0;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.entry h2 {
+  margin-top: 0;
+}
+
+.entry p {
+  max-width: 800px;
+}
+
+/* TRYB NOCNY */
 .dark {
   background: #121212;
   color: #eee;
 }
 
-button {
-  margin: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.entry {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 8px;
-}
-
-.dark .entry {
+.dark .entry,
+.dark .filterBox {
   background: #1e1e1e;
 }
 
-.tags span {
-  background: #ddd;
-  padding: 3px 8px;
-  margin-right: 5px;
-  border-radius: 5px;
-  font-size: 12px;
+.dark button {
+  background: #333;
+  color: #eee;
 }
 
-.dark .tags span {
-  background: #333;
+.dark .topBar {
+  background: #121212;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* TELEFONY */
+@media (max-width: 600px) {
+
+  body {
+    padding: 6px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .topBar {
+    flex-wrap: wrap;
+  }
+
+  .topBar input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .topBar button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filterBox {
+    min-width: 240px;
+  }
+
+  .filterBox button {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .entry {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .entry h2 {
+    font-size: 22px;
+  }
+
+  .entry h3 {
+    font-size: 18px;
+  }
+
+  .entry p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
 }
