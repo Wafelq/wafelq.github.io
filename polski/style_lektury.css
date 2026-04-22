@@ -175,3 +175,23 @@ button.active {
     line-height: 1.7;
   }
 }
+
+/* MOTYWY */
+.motywy {
+  margin: 10px 0;
+}
+
+.tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 8px;
+  margin: 3px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.dark .tag {
+  background: #1e3a8a;
+  color: #dbeafe;
+}

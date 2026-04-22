@@ -12,15 +12,18 @@ Papa.parse(SHEET_URL, {
   header: false,
     complete: function(results) {
     entries = results.data
-      .slice(1)
-      .filter(row => row[0] && row[3])
-      .map(row => ({
-        epoka: row[0]?.trim() || "",
-        dzielo: row[1]?.trim() || "",
-        autor: row[2]?.trim() || "",
-        streszczenie: row[3]?.trim() || "",
-        konteksty: row[4]?.trim() || ""
-      }));
+    .slice(1)
+    .filter(row => row[0] && row[3])
+    .map(row => ({
+      epoka: row[0]?.trim() || "",
+      dzielo: row[1]?.trim() || "",
+      autor: row[2]?.trim() || "",
+      streszczenie: row[3]?.trim() || "",
+      konteksty: row[4]?.trim() || "",
+      motywy: row[5]
+        ? row[5].split(",").map(m => m.trim()).filter(m => m)
+        : []
+    }));
 
     renderFilters();
     renderEpochList();
@@ -71,6 +74,7 @@ function renderEntries(){
     if(activeFilters.epoka && e.epoka !== activeFilters.epoka) return;
     if(activeFilters.dzielo && e.dzielo !== activeFilters.dzielo) return;
     if(activeFilters.autor && e.autor !== activeFilters.autor) return;
+    if(activeFilters.motyw && !e.motywy.includes(activeFilters.motyw)) return;
 
     // WYSZUKIWARKA
     if(search){
@@ -83,9 +87,14 @@ function renderEntries(){
 
     div.innerHTML = `
       <h2>${e.dzielo}</h2>
+
       <div class="tags">
-        <span><b>Epoka:</b> ${e.epoka}</span><br>
-        <span><b>Autor:</b> ${e.autor}</span>
+        <div><b>Epoka:</b> ${e.epoka}</div>
+        <div><b>Autor:</b> ${e.autor}</div>
+      </div>
+
+      <div class="motywy">
+        ${e.motywy.map(m => `<span class="tag" onclick="filterByMotyw('${m}')">${m}</span>`).join("")}
       </div>
 
       <h3>Streszczenie</h3>
@@ -125,6 +134,11 @@ function randomEntry(){
   renderEntries();
 }
 
+function filterByMotyw(motyw){
+  activeFilters.motyw = motyw;
+  renderEntries();
+}
+
 // TRYB NOCNY
 function toggleDarkMode(){
   document.body.classList.toggle("dark");
@@ -152,10 +166,11 @@ renderEntries();
 highlightActiveFilters();
 
 function resetFilters(){
-  activeFilters = {
+  let activeFilters = {
     epoka: null,
     dzielo: null,
-    autor: null
+    autor: null,
+    motyw: null
   };
   document.getElementById("search").value = "";
   renderEntries();
