@@ -193,14 +193,14 @@ function resetFilters(){
 
 function getEpokaYears(epoka){
     const map = {
-      "Starożytność": "do V w.",
-      "Średniowiecze": "V–XV w.",
-      "Renesans": "XVI w.",
-      "Barok": "XVII w.",
-      "Oświecenie": "XVIII w.",
+      "Starożytność": "od IX w.p.n.e do V w.",
+      "Średniowiecze": "V–XVI w.",
+      "Renesans": "XVI-XVII w.",
+      "Barok": "XVII w. - 1765.",
+      "Oświecenie": "1765-1822 (XVIII w.)",
       "Romantyzm": "1822–1863",
       "Pozytywizm": "1864–1890",
-      "Młoda Polska": "1890–1918",
+      "Młoda Polska": "1891–1918",
       "Dwudziestolecie międzywojenne": "1918–1939",
       "Wojna": "1939–1945",
       "Współczesność": "po 1945"
