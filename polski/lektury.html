@@ -5,12 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lektury</title>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script src="lektury.js"></script>
 <link rel="stylesheet" href="style_lektury.css">
 </head>
 <body>
 
 <h1>Streszczenia lektur</h1>
+
+<!-- TIMELINE EPOK -->
+<div class="timelineWrapper">
+  <div class="timeline" id="timeline">
+    <!-- generowane JS -->
+  </div>
+</div>
 
 <div class="topBar">
   <input type="text" id="search" placeholder="Szukaj..." oninput="renderEntries()">
@@ -41,9 +47,32 @@
 </div>
 
 <hr>
-
 <div id="entries"></div>
 
+<div id="epokaModal" class="modal hidden">
 
+  <div class="modal-window" id="modalWindow">
+
+    <div class="modal-bar" id="modalBar">
+      <span id="modalTitle">Epoka</span>
+      <span class="modal-close" onclick="closeEpokaModal()">✕</span>
+    </div>
+
+    <div class="modal-content">
+      <div id="modalYears" style="font-weight:bold; margin-bottom:5px;"></div>
+      <p id="modalOpis"></p>
+
+      <h3>Motywy</h3>
+      <div id="modalMotywy"></div>
+
+      <h3>Lektury</h3>
+      <div id="modalLektury"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="lektury.js"></script>
 </body>
 </html>

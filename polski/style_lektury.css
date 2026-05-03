@@ -104,6 +104,134 @@ button.active {
   background: #121212;
 }
 
+/* ============================= TIMELINE ============================== */
+.timelineWrapper {
+  overflow-x: auto;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.timeline {
+  display: flex;
+  gap: 10px;
+  min-width: 900px;
+}
+
+.timelineItem {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+
+.timelineItem:hover {
+  background: #e0e0e0;
+}
+
+.timelineItem.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.timelineItem small {
+  display: block;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* tryb nocny */
+.dark .timelineItem {
+  background: #1e1e1e;
+}
+
+.dark .timelineItem.active {
+  background: #eee;
+  color: #000;
+}
+/* ============================= OVERLAY ============================== */
+
+/* OVERLAY */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#modalYears {
+  color: #555;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* OKNO */
+.modal-window {
+  width: 350px;
+  background: white;
+  border: 2px solid #245edb;
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* PASEK */
+.modal-bar {
+  background: linear-gradient(to right, #245edb, #3a7bd5);
+  color: white;
+  padding: 5px 8px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ZAMKNIJ */
+.modal-close {
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: red;
+}
+
+/* TREŚĆ */
+.modal-content {
+  padding: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* LEKTURY */
+.modalLektura {
+  padding: 6px;
+  border-radius: 6px;
+  background: #eee;
+  margin: 5px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .modal-window {
+    width: 90%;
+  }
+
+  .modal-bar {
+    cursor: default;
+  }
+}
+
+
 /* TABLET */
 @media (max-width: 900px) {
   .filters {
@@ -174,6 +302,8 @@ button.active {
     font-size: 17px;
     line-height: 1.7;
   }
+
+  /* TIMELINE */
 }
 
 /* MOTYWY */

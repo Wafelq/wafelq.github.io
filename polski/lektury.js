@@ -4,7 +4,8 @@ let entries = [];
 let activeFilters = {
   epoka: null,
   dzielo: null,
-  autor: null
+  autor: null,
+  motyw: null
 };
 
 Papa.parse(SHEET_URL, {
@@ -22,13 +23,20 @@ Papa.parse(SHEET_URL, {
       konteksty: row[4]?.trim() || "",
       motywy: row[5]
         ? row[5].split(",").map(m => m.trim()).filter(m => m)
+        : [],
+
+      epoka_nazwa: row[7]?.trim() || "",
+      epoka_opis: row[8]?.trim() || "",
+      epoka_motywy: row[9]
+        ? row[9].split(",").map(m => m.trim()).filter(m => m)
         : []
     }));
 
     renderFilters();
-    renderEpochList();
+    // renderEpochList();
     renderEntries();
     highlightActiveFilters();
+    renderTimeline();
   }
 });
 
@@ -40,6 +48,8 @@ function renderFilters(){
 
 function renderFilterGroup(elementId, key){
   const box = document.getElementById(elementId);
+  if(!box) return;
+
   const values = [...new Set(entries.map(e => e[key]).filter(v => v))];
 
   box.innerHTML = "";
@@ -109,21 +119,21 @@ function renderEntries(){
 }
 
 // SPIS EPOK
-function renderEpochList(){
-  const box = document.getElementById("epochList");
-  const epoki = [...new Set(entries.map(e => e.epoka))];
+// function renderEpochList(){
+//   const box = document.getElementById("epochList");
+//   const epoki = [...new Set(entries.map(e => e.epoka))];
 
-  box.innerHTML = "";
-  epoki.forEach(ep => {
-    const li = document.createElement("li");
-    li.textContent = ep;
-    li.onclick = () => {
-      activeFilters.epoka = ep;
-      renderEntries();
-    };
-    box.appendChild(li);
-  });
-}
+//   box.innerHTML = "";
+//   epoki.forEach(ep => {
+//     const li = document.createElement("li");
+//     li.textContent = ep;
+//     li.onclick = () => {
+//       activeFilters.epoka = ep;
+//       renderEntries();
+//     };
+//     box.appendChild(li);
+//   });
+// }
 
 // LOSUJ LEKTURĘ
 function randomEntry(){
@@ -160,19 +170,145 @@ function highlightActiveFilters(){
   });
 }
 
-renderFilters();
-renderEpochList();
-renderEntries();
-highlightActiveFilters();
+// renderFilters();
+// renderEpochList();
+// renderEntries();
+// highlightActiveFilters();
 
 function resetFilters(){
-  let activeFilters = {
+  activeFilters = {
     epoka: null,
     dzielo: null,
     autor: null,
     motyw: null
   };
+
   document.getElementById("search").value = "";
   renderEntries();
   highlightActiveFilters();
+  highlightActiveTimeline();
 }
+
+// ============= TIMELINE EPOK ================
+
+function getEpokaYears(epoka){
+    const map = {
+      "Starożytność": "do V w.",
+      "Średniowiecze": "V–XV w.",
+      "Renesans": "XVI w.",
+      "Barok": "XVII w.",
+      "Oświecenie": "XVIII w.",
+      "Romantyzm": "1822–1863",
+      "Pozytywizm": "1864–1890",
+      "Młoda Polska": "1890–1918",
+      "Dwudziestolecie międzywojenne": "1918–1939",
+      "Wojna": "1939–1945",
+      "Współczesność": "po 1945"
+    };
+
+    return map[epoka] || "";
+  }
+
+function renderTimeline(){
+  const timeline = document.getElementById("timeline");
+  if(!timeline) return;
+
+  const epoki = [
+    "Starożytność",
+    "Średniowiecze",
+    "Renesans",
+    "Barok",
+    "Oświecenie",
+    "Romantyzm",
+    "Pozytywizm",
+    "Młoda Polska",
+    "Dwudziestolecie międzywojenne",
+    "Wojna",
+    "Współczesność"
+  ];
+
+  timeline.innerHTML = "";
+
+  epoki.forEach(epoka => {
+    const div = document.createElement("div");
+    div.className = "timelineItem";
+
+    div.innerHTML = `
+      <div>${epoka}</div>
+      <small>${getEpokaYears(epoka)}</small>
+    `;
+
+    div.dataset.value = epoka;
+
+    div.onclick = () => {
+      if(activeFilters.epoka === epoka){
+        activeFilters.epoka = null;
+      } else {
+        activeFilters.epoka = epoka;
+      }
+
+      openEpokaModal(epoka);
+      renderEntries();
+      highlightActiveTimeline();
+      highlightActiveFilters();
+    };
+
+    timeline.appendChild(div);
+  });
+}
+
+// ================ EPOKI OKIENKA =================
+
+function openEpokaModal(epoka){
+  const modal = document.getElementById("epokaModal");
+  modal.classList.remove("hidden");
+
+  document.getElementById("modalTitle").textContent = epoka;
+
+  // 👇 NOWE
+  document.getElementById("modalYears").textContent = getEpokaYears(epoka);
+
+  const first = entries.find(e => e.epoka === epoka);
+
+  document.getElementById("modalOpis").textContent =
+    first?.epoka_opis || "Brak opisu";
+
+  document.getElementById("modalMotywy").innerHTML =
+    (first?.epoka_motywy || [])
+      .map(m => `<span class="tag">${m}</span>`)
+      .join("");
+
+  const lektury = entries.filter(e => e.epoka === epoka);
+
+  document.getElementById("modalLektury").innerHTML =
+    lektury.map(e => `
+      <div class="modalLektura">
+        <b>${e.dzielo}</b><br>
+        <small>${e.autor}</small>
+      </div>
+    `).join("");
+}
+
+function closeEpokaModal(){
+  document.getElementById("epokaModal").classList.add("hidden");
+}
+
+const modalWindow = document.getElementById("modalWindow");
+const modalBar = document.getElementById("modalBar");
+
+let offsetX = 0, offsetY = 0, isDown = false;
+
+modalBar?.addEventListener("mousedown", (e)=>{
+  isDown = true;
+  offsetX = e.clientX - modalWindow.offsetLeft;
+  offsetY = e.clientY - modalWindow.offsetTop;
+});
+
+document.addEventListener("mousemove", (e)=>{
+  if(!isDown) return;
+  modalWindow.style.position = "absolute";
+  modalWindow.style.left = (e.clientX - offsetX) + "px";
+  modalWindow.style.top = (e.clientY - offsetY) + "px";
+});
+
+document.addEventListener("mouseup", ()=> isDown = false);
