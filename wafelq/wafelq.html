@@ -21,7 +21,7 @@
             <div class="window-buttons">
                 <span class="btn min"></span>
                 <span class="btn max" onclick="openSection('sekcja-etc')"></span>
-                <span class="btn close" onclick="openSection('sekcja-miesiac')"></span>
+                <span class="btn close" onclick="openSection('sekcja-zycie')"></span>
             </div>
         </header>
 
@@ -32,7 +32,7 @@
                         <button onclick="openSection('sekcja-jedzonko')" id="btn-jedzonko">🧇 Fav stuff</button>
                         <button onclick="openSection('sekcja-artysci')" id="btn-artysci">🎨 Artyści</button>
                         <button onclick="openSection('sekcja-aktywnosci')" id="btn-aktywnosci">☎️ O mnie</button>
-                        <button onclick="openSection('sekcja-historia')" id="btn-historia">📜 Historia</button>
+                        <!-- <button onclick="openSection('sekcja-historia')" id="btn-historia">📜 Historia</button> -->
                         <button onclick="openSection('sekcja-webings')" id="btn-webings">💿 Webings</button>
                         <!-- <button onclick="openSection('sekcja-miesiac')" id="btn-miesiac">📅 Miesiac</button> -->
                     </div>
@@ -55,6 +55,18 @@
         </div>
 
         <div id="side-windows">
+
+            <div class="side-window" id="sekcja-zycie">
+                <div class="mini-window-bar">
+                    <span>Życie</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    Te kropki to ile tygodni życia mi zostało jeśli będę żył 75 lat. (średnia długość życia mężczyzn w Polsce)
+                    
+                </div>
+            </div>
+
             <div class="side-window" id="sekcja-filmy">
                 <div class="mini-window-bar">
                     <span>🎥 Filmy</span>
@@ -63,10 +75,10 @@
                 <div class="mini-content">
                     <h2 class="section-title">🎥 Ulubione filmy/seriale:</h2>
                     <ul>
+                        <li>Piraci z karaibów (1-4)</li>
                         <li>Forrest Gump</li>
                         <li>Perfect Days</li>
-                        <li>Auta (Disney Cars) <s>(głównie z sentymentu)</s></li>
-                        <li>Piraci z karaibów (1-4)</li>
+                        <li>Auta (Disney: Cars) <s>(głównie z sentymentu)</s></li>                       
                         <li>Pingwiny z Madagaskaru (serial Nickelodeon)</li>
                         <li>Madagaskar</li>
                         <li>Big Hero 6</li>
@@ -74,7 +86,9 @@
                         <li>bo burnham: inside</li>
                     </ul>
                     Filmy do obejrzenia:
-                    <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a>
+                    <a href="https://letterboxd.com/wafelq/watchlist/">letterbox</a><br><br>
+
+                    Od małego uwielbiam tworzyć filmy, naoglądałem się kiedyś "Verteza" i "Pana Śmietanki" (pomińmy co później się z nimi stało) i tak sam chciałem robić rzeczy w internecie.
                 </div>
             </div>
 
@@ -92,6 +106,7 @@
                         <li>Republika</li>
                         <li>Obywatel G.C.</li>
                         <li>Robert Abazur</li>
+                        <li>Alec Holowka</li>
                         <li>Lin-Manuel Miranda</li>
                         <li>Tom Rosenthal</li>
                         <li>Tatsuro Yamashita</li>
@@ -106,7 +121,9 @@
                         <li><s>Taco Hemigway</s></li>
                     </ul>
                     Moja muzyka:
-                    <a href="https://soundcloud.com/wafelq">soundcloud</a>
+                    <a href="https://soundcloud.com/wafelq">soundcloud</a><br><br>
+                    Mój spotify:
+                    <a href="https://open.spotify.com/user/heevqhnnltz6t86bhxo8t7l9k?si=97eed6bed223404e">spotify</a>
                 </div>
             </div>
 
@@ -118,19 +135,20 @@
                 <div class="mini-content">
                     <h2 class="section-title">🎮 Ulubione gry:</h2>
                     <ol>
-                        <li>Minecraft</li>
-                        <li>Danganronpa (1-2)</li>
-                        <li>Psychonauts</li>
-                        <li>✅ Night in the woods</li>
+                        <li>Minecraft (Java, PS3, Xbox360)</li>
+                        <li>Danganronpa (1-2) (PC)</li>
+                        <li>Psychonauts (PC)</li>
+                        <li>Night in the woods (PC)</li>
+                        <li>Animal Crossing: New Leaf (3DS)</li>
                         <li>Tomadatchi Life (3DS)</li>
-                        <li>Helltaker</li>
-                        <li>Undertale</li>
-                        <li>Disney Cars: video game</li>
-                        <li>A Hat in Time</li>
-                        <li>Crazy Taxi</li>
-                        <li>Pizza Tower</li>
-                        <li>Zuma Deluxe</li>
-                        <li>Rayman Origins</li>
+                        <li>Helltaker (PC)</li>
+                        <li>Undertale (PC)</li>
+                        <li>Disney Cars: video game (PC)</li>
+                        <li>A Hat in Time (PC)</li>
+                        <li>Crazy Taxi (GameCube)</li>
+                        <li>Pizza Tower (PC)</li>
+                        <li>Zuma Deluxe (PC)</li>
+                        <li>Rayman Origins (PS3)</li>
                     </ol>
 
                     <h2 class="section-title">☎️ Do zagrania:</h2>
@@ -147,7 +165,24 @@
                         <li>Persona 3 (Portable)</li>
                         <li>Snake Pass</li>
                         <li>✅ Tomadatchi Life (3DS)</li>
-                        <li>✅ Animal Crossing (3DS)</li>
+                        <li>✅ Animal Crossing: New Leaf (3DS)</li>
+                    </ol>
+
+                    <hr>
+
+                    <h2 class="section-title">😳🥂 pićko</h2>
+                    <ol>
+                        <li>Herbata (lipton: earl gray - call me basic xdd)</li>
+                        <li>Sprite</li>
+                        <li>Malinaż</li>
+                        <li>Woda z sokiem malinowym</li>
+                    </ol>
+
+                    <h2 class="section-title">😳🥞 yummers</h2>
+                    <ol>
+                        <li>Naleśniki z serkiem i dżemem</li>
+                        <li>Racuchy z jabłkiem</li>
+                        <li>Kotlety schabowe</li>
                     </ol>
                 </div>
             </div>
@@ -183,7 +218,7 @@
                         <li>Graf</li>
                         <li>OP. Adam Szustak (Langusta na Palmie)</li>
 
-                        (btw specjalnie nie dałem listy numerowanej bo wszystkich z was szanuje i podziwiam tak samo)
+                        (bez listy numerowanej bo wszyscy równie based)
                     </ul>
                     
                 </div>
@@ -197,68 +232,65 @@
                 <div class="mini-content">
                     <h2>💽 Zainteresowania:</h2>
                     <ul>
-                        <li>Szeroko pojęta sztuka</li>
-                        <li>Montaz filmów</li>
+                        <li>Art!!</li>
+                        <li>Montaż filmów</li>
                         <li>Muzyka (gitara i keyboard)</li>
-                        <li>Rysowanie (postacie/architektura)</li>
-                        <li>Elektrotechnika</li>
+                        <li>Rysowanie (postacie/architektura)</li>                       
                         <li>Technologia (nowa jest spoko, choć najbardziej interesuje się retro)</li>
                         <li>Retro (gry i konsole: PS3, Wii, GameCube, PS2, Dreamcast, Xbox, Xbox360, Nintendo3DS)</li>
-                    </ul>
-
-                    <h2>✨ Zasady:</h2>
-                    <ul>
-                        <li>Nie rób drugiemu co tobie nie miłe.</li>
-                        <li>Rób drugiemu co tobie miłe!</li>
-                        <li>Judge them by their fruits.</li>
-                        <li>Own your mistakes, but you are not your past.</li>
-                        <li>Make a list of all things you find desirable in a mate. Then you, yourself, become that list.</li>
-                        <li>Nie istnieje coś takiego jak system "karmy" (Księga Joba temu zaprzecza).</li>                   
-                    </ul>
-
-                    <h2 class="section-title">💽 Zalety:</h2>
-                    <ul>
-                        <li>Empatia (nadgorliwość)</li>
-                        <li>Kreatywność (montaz, grafika, rysunek, muzyka, animacje, web, modele 3D, pomysły, zaradność)</li>
-                        <li>Szybko i chętnie się uczę</li>
-                        <li>Siła fizyczna i wytrzymałość</li>
-                        <li>Nie trzymam urazy</li>                       
-                        <li>Odpowiedzialność</li>
-                        <li>Refleksyjność (nadanaliza)</li>
-                        <li>Samoświadomość (widzę własne błędy i od razu je koryguje)</li>
-                        <li>Duchowość</li>
-                        <li>Odwaga w konfrontacji z sobą</li>
-                        <li>Lojalność w relacjach</li>
-                        <li>Inicjatywa</li>
-                        <li>Pomoc</li>
-                        <li>Nie uciekam od winy.</li>
-                    </ul>
-
-                    <h2 class="section-title">⏰ Wady:</h2>
-                    <ul>
-                        <li>Zbyt surowy wewnętrzny krytyk</li>
-                        <li>Nadgorliwosc</li>
-                        <li>Za duzo analizuje</li>
-                        <li>Impulsywność</li>
-                        <li>Za bardzo się porównuje do innych</li>
-                        <li>Wrazliwość</li>
-                        <li>Katastrowizowanie</li>
-                        <li>Za bardzo polegam na innych</li>
-
-                        (ale zadna z tych wad nie czyni mnie bezwartosciowym)
-                    </ul>
-
-                    <h2 class="section-title">🏃‍♀️ Aktywności:</h2>
-                    <ul>
-                        <li>Siłownia</li>
-                        <li>Bieganie (ok. 10-15km)</li>
-                        <li>Górskie wycieczki (ok. 15-25km)</li>
-                        <li>Podróże</li>
+                        <li>Elektrotechnika/majsterkowanie</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="side-window" id="sekcja-historia">
+            <div class="side-window" id="sekcja-webings">
+                <div class="mini-window-bar">
+                    <span>💿 Webings</span>
+                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                </div>
+                <div class="mini-content">
+                    <h2 class="section-title">💿 Webings</h2>
+                    <img src="./assets/img/icons/persona.gif" alt="bomba">
+                    <img src="./assets/img/icons/internetexplorer.gif" alt="bomba">
+                    <img src="./assets/img/icons/ebay-2000.gif" alt="bomba">
+                    <img src="./assets/img/icons/hotmail-2000.gif" alt="bomba">
+                    <img src="./assets/img/icons/ibm-1997.gif" alt="bomba">           
+                    <img src="./assets/img/icons/mac-mall-1998.gif" alt="bomba">                 
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div class="bottom-toolbar">
+            <div class="bottom-left">
+                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">🌐 Znajdziesz mnie również tutaj:</marquee>
+            </div>
+
+            <div class="bottom-actions">
+                <a href="https://www.instagram.com/wafelq_/" target="_blank">📸 Instagram</a>
+                <a href="https://www.youtube.com/@wafelq_/" target="_blank">🛑 YouTube</a>
+                <a href="https://wafelq.github.io/dreams/dreams.html">📀 Koncert życzeń</a>
+                <!-- <a href="https://steamcommunity.com/id/Wafelq/">💭 Steam</a> -->
+            </div>
+        </div>
+
+        
+        <!-- <h2 class="section-title">Dziękuję za przeczytanie!!</h2> -->
+
+        <footer>
+        🧇💽🚗 • Wafelq • 2026
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- 
+
+============== ARCHIWUM ================
+
+<div class="side-window" id="sekcja-historia">
                 <div class="mini-window-bar">
                     <span>📜 Historia</span>
                     <span class="mini-close" onclick="closeWindow(this)">✕</span>
@@ -284,22 +316,6 @@
                     (to be continued)
 
                     
-                </div>
-            </div>
-
-            <div class="side-window" id="sekcja-webings">
-                <div class="mini-window-bar">
-                    <span>💿 Webings</span>
-                    <span class="mini-close" onclick="closeWindow(this)">✕</span>
-                </div>
-                <div class="mini-content">
-                    <h2 class="section-title">💿 Webings</h2>
-                    <img src="./assets/img/icons/persona.gif" alt="bomba">
-                    <img src="./assets/img/icons/internetexplorer.gif" alt="bomba">
-                    <img src="./assets/img/icons/ebay-2000.gif" alt="bomba">
-                    <img src="./assets/img/icons/hotmail-2000.gif" alt="bomba">
-                    <img src="./assets/img/icons/ibm-1997.gif" alt="bomba">           
-                    <img src="./assets/img/icons/mac-mall-1998.gif" alt="bomba">                 
                 </div>
             </div>
 
@@ -369,7 +385,10 @@
                 </div>
             </div>
 
-            <div class="side-window" id="sekcja-miesiac">
+
+
+
+<div class="side-window" id="sekcja-miesiac">
                 <div class="mini-window-bar">
                     <span>📅 Miesiac</span>
                     <span class="mini-close" onclick="closeWindow(this)">✕</span>
@@ -452,28 +471,4 @@
                     </ul>
                 </div>
             </div>
-        </div>
-
-
-        <div class="bottom-toolbar">
-            <div class="bottom-left">
-                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">🌐 Znajdziesz mnie również tutaj:</marquee>
-            </div>
-
-            <div class="bottom-actions">
-                <a href="https://www.instagram.com/wafelq_/" target="_blank">📸 Instagram</a>
-                <a href="https://www.youtube.com/@wafelq_/" target="_blank">🛑 YouTube</a>
-                <a href="https://wafelq.github.io/dreams/dreams.html">📀 Koncert życzeń</a>
-                <!-- <a href="https://steamcommunity.com/id/Wafelq/">💭 Steam</a> -->
-            </div>
-        </div>
-
-        
-        <!-- <h2 class="section-title">Dziękuję za przeczytanie!!</h2> -->
-
-        <footer>
-        🧇💽🚗 • Wafelq • 2026
-        </footer>
-    </div>
-</body>
-</html>
+-->
