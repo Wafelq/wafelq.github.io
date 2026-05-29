@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Captain Esther's Logbook</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold: #c9a86a;
+    --dark: #0e0b08;
+    --wood: #1a120c;
+    --paper: #d7c3a3;
+    --ocean: #1d2f3f;
+    --text: #f0e2c5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+        url("./assets/img/kosmos.gif");
+    background-size:cover;
+    background-attachment:fixed;
+    color:var(--text);
+    font-family:"Cormorant Garamond", serif;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,.45);
+    border-bottom:1px solid rgba(201,168,106,.3);
+}
+
+.nav-inner{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-family:"Pirata One", cursive;
+    font-size:2rem;
+    color:var(--gold);
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-family:"Cinzel", serif;
+    transition:.3s;
+    position:relative;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:1px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-family:"Pirata One", cursive;
+    font-size:6rem;
+    color:var(--gold);
+    text-shadow:0 0 25px rgba(0,0,0,.7);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.5rem;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.enter-btn{
+    margin-top:40px;
+    padding:16px 38px;
+    background:rgba(0,0,0,.4);
+    border:1px solid var(--gold);
+    color:var(--gold);
+    font-family:"Cinzel", serif;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.enter-btn:hover{
+    background:var(--gold);
+    color:black;
+    transform:translateY(-3px);
+}
+
+/* ========================= */
+/* GENERAL SECTION */
+/* ========================= */
+
+section{
+    width:90%;
+    max-width:1400px;
+    margin:120px auto;
+}
+
+.section-title{
+    font-family:"Pirata One", cursive;
+    font-size:4rem;
+    color:var(--gold);
+    margin-bottom:50px;
+    text-align:center;
+}
+
+/* ========================= */
+/* CHAPTERS */
+/* ========================= */
+
+.chapter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.chapter-card{
+    background:
+        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),
+        url("assets/parchment-placeholder.jpg");
+
+    background-size:cover;
+    border:1px solid rgba(201,168,106,.3);
+    padding:35px;
+    min-height:280px;
+    position:relative;
+    transition:.4s;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.chapter-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+    box-shadow:0 0 30px rgba(201,168,106,.15);
+}
+
+.chapter-number{
+    font-size:1rem;
+    letter-spacing:3px;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.chapter-card h3{
+    font-size:2.2rem;
+    margin-bottom:20px;
+    font-family:"Cinzel", serif;
+}
+
+.chapter-card p{
+    font-size:1.2rem;
+    line-height:1.6;
+}
+
+/* ========================= */
+/* CHARACTERS */
+/* ========================= */
+
+.character-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.character-card{
+    background:rgba(10,10,10,.65);
+    border:1px solid rgba(201,168,106,.25);
+    overflow:hidden;
+    transition:.4s;
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.character-card:hover{
+    transform:scale(1.02);
+    border-color:var(--gold);
+}
+
+.character-image-esther{
+    height:450px;
+    background:url("/assets/img/esther_1.png");
+    background-size:cover;
+    background-position:top;
+}
+
+.character-image-jack{
+    height:450px;
+    background:url("/assets/img/jack_yuxin.jpg");
+    background-size:cover;
+    background-position:top;
+}
+
+.character-info{
+    padding:25px;
+}
+
+.character-info h3{
+    font-family:"Cinzel", serif;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.role{
+    color:var(--gold);
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.character-info p{
+    line-height:1.6;
+    font-size:1.1rem;
+}
+
+/* ========================= */
+/* JOURNAL */
+/* ========================= */
+
+.journal{
+    background:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
+        url("assets/journal-paper-placeholder.jpg");
+
+    background-size:cover;
+    padding:70px;
+    border:1px solid rgba(201,168,106,.2);
+}
+
+.journal-entry{
+    max-width:850px;
+    margin:auto;
+    font-size:1.5rem;
+    line-height:2;
+    font-style:italic;
+}
+
+/* ========================= */
+/* MAP */
+/* ========================= */
+
+.map-container{
+    height:650px;
+    border:1px solid rgba(201,168,106,.3);
+    background:
+        linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
+        url("assets/map-placeholder.jpg");
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.map-marker{
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:var(--gold);
+    border-radius:50%;
+    box-shadow:0 0 15px var(--gold);
+    cursor:pointer;
+}
+
+/* placeholder positions */
+
+.marker1{
+    top:35%;
+    left:40%;
+}
+
+.marker2{
+    top:55%;
+    left:62%;
+}
+
+.marker3{
+    top:25%;
+    left:70%;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    border-top:1px solid rgba(201,168,106,.2);
+    margin-top:120px;
+    background:rgba(0,0,0,.45);
+}
+
+footer p{
+    letter-spacing:2px;
+    font-size:1rem;
+    opacity:.8;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:black;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    nav ul{
+        gap:15px;
+        font-size:.8rem;
+    }
+
+    .section-title{
+        font-size:3rem;
+    }
+
+    .journal{
+        padding:35px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- NAV -->
+<!-- ========================= -->
+
+<nav>
+    <div class="nav-inner">
+
+        <div class="logo">
+            Esther
+        </div>
+
+        <ul>
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#map">Map</a></li>
+            <li><a href="#journal">Journal</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>Captain Esther's Logbook</h1>
+
+        <p>
+            <q>I'd wish to have it for my own, personal and selfish gains like every single one of you does.</q>
+        </p>
+
+        <a href="#chapters">
+            <button class="enter-btn">
+                ENTER THE STORY <br>(cool button for now :P)
+            </button>
+        </a>
+
+    </div>
+
+</header>
+
+<!-- ========================= -->
+<!-- CHAPTERS -->
+<!-- ========================= -->
+
+<section id="chapters">
+
+    <h2 class="section-title">Chapters</h2>
+
+    <div class="chapter-grid">
+
+        <a href="chapters/chapter_1.html" target="_blank" class="chapter-card">
+            <div class="chapter-number">
+                CHAPTER I
+            </div>
+
+            <h3>Life in London</h3>
+
+            <p>
+                Beginning of Esther's story, great but troublesome family versus dream of becoming free and independent.
+            </p>   
+        </a>
+
+        <a href="chapters/chapter_2.html" target="_blank" class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER II
+            </div>
+
+            <h3>Settlement in the Caribbean</h3>
+
+            <p>
+                Absent father, depressed mother, new expectations on the horizon... will Essie handle all of that?
+            </p>
+
+        </a>
+
+        <a href="chapters/chapter_3.html" target="_blank" class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER III (🚫 WIP)
+            </div>
+
+            <h3>Meeting Jack Sparrow</h3>
+
+            <p>
+                14 year old Esther meets silly guy from across the sea, who will soon turn her whole world upside down...
+            </p>
+
+        </a>
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CHARACTERS -->
+<!-- ========================= -->
+
+<section id="characters">
+
+    <h2 class="section-title">Characters</h2>
+
+    <div class="character-grid">
+
+
+        <a href="characters_1.html" target="_blank" class="character-card">
+            <div class="character-image-esther"></div>
+
+                <div class="character-info">
+
+                    <h3>Esther</h3>
+
+                    <div class="role">
+                        CAPTAIN
+                    </div>
+
+                    <p>
+                        The slayest diva in the whole seven seas... and beyond!!
+                    </p>
+
+            </div>
+        </a>
+
+        <a href="characters_1.html" target="_blank" class="character-card">
+            <div class="character-image-jack"></div>
+
+                <div class="character-info">
+
+                    <h3>Jack Sparrow</h3>
+
+                    <div class="role">
+                        PAL (or... lover? nu uh??)
+                    </div>
+
+                    <p>
+                        The (second most) slayest diva in the whole seven seas... and beyond!!
+                    </p>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- MAP -->
+<!-- ========================= -->
+
+<section id="map">
+
+    <h2 class="section-title">Caribbean Map</h2>
+
+    <div class="map-container">
+
+        <div class="map-marker marker1"></div>
+        <div class="map-marker marker2"></div>
+        <div class="map-marker marker3"></div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- JOURNAL -->
+<!-- ========================= -->
+
+<section id="journal">
+
+    <h2 class="section-title">Journal</h2>
+
+    <div class="journal">
+
+        <div class="journal-entry">
+
+            Coś tu śmierdzi... <br>
+            Gówno odpowiedź to gówno.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+    <p>
+        All lore created by <b>yuxin</b> • Made by Wafelq 2026
+    </p>
+
+</footer>
+
+</body>
+</html>

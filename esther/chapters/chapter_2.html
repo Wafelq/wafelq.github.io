@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Black Tide • Chapter I</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#c8a56a;
+    --paper:#dbc6a3;
+    --text:#f3e8d0;
+    --dark:#0d0a08;
+    --wood:#1a120d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        linear-gradient(rgba(0,0,0,.83), rgba(0,0,0,.88)),
+        url("/assets/img/water_background.gif");
+
+    background-size:cover;
+    background-attachment:fixed;
+    color:var(--text);
+    font-family:"Cormorant Garamond", serif;
+    overflow-x:hidden;
+}
+
+/* ======================= */
+/* NAVIGATION */
+/* ======================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(200,165,106,.2);
+}
+
+.nav-inner{
+    width:90%;
+    margin:auto;
+    padding:18px 0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:"Pirata One", cursive;
+    color:var(--gold);
+    font-size:2rem;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:var(--text);
+    border:1px solid rgba(200,165,106,.3);
+    padding:10px 18px;
+    transition:.3s;
+    font-family:"Cinzel", serif;
+    letter-spacing:1px;
+}
+
+.back-btn:hover{
+    background:var(--gold);
+    color:black;
+}
+
+/* ======================= */
+/* HERO */
+/* ======================= */
+
+.hero{
+    min-height:60vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:120px 20px 80px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.chapter-number{
+    color:var(--gold);
+    letter-spacing:5px;
+    margin-bottom:15px;
+    font-family:"Cinzel", serif;
+}
+
+.hero h1{
+    font-family:"Pirata One", cursive;
+    font-size:6rem;
+    color:var(--gold);
+    margin-bottom:25px;
+    text-shadow:0 0 30px rgba(0,0,0,.7);
+}
+
+.hero p{
+    font-size:1.5rem;
+    line-height:1.8;
+    opacity:.9;
+}
+
+/* ======================= */
+/* ARTICLE */
+/* ======================= */
+
+.chapter-wrapper{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding-bottom:120px;
+}
+
+.chapter-paper{
+
+    background:
+        linear-gradient(rgba(16,11,8,.93), rgba(12,8,5,.95)),
+        url("assets/parchment-placeholder.jpg");
+
+    background-size:cover;
+
+    border:1px solid rgba(200,165,106,.2);
+
+    padding:90px;
+
+    box-shadow:
+        0 0 60px rgba(0,0,0,.6),
+        inset 0 0 80px rgba(0,0,0,.35);
+}
+
+/* ======================= */
+/* TEXT */
+/* ======================= */
+
+.chapter-content{
+    font-size:1.55rem;
+    line-height:2.2;
+}
+
+.chapter-content p{
+    margin-bottom:40px;
+}
+
+.chapter-content::first-letter{
+    font-size:5rem;
+    float:left;
+    line-height:.9;
+    padding-right:12px;
+    color:var(--gold);
+    font-family:"Pirata One", cursive;
+}
+
+/* ======================= */
+/* IMAGES */
+/* ======================= */
+
+.image-left,
+.image-right{
+
+    width:320px;
+    height:440px;
+
+    background:url("/assets/img/w.png");
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(200,165,106,.25);
+
+    padding:12px;
+
+    position:relative;
+
+    margin-bottom:20px;
+}
+
+.image-left{
+    float:left;
+    margin-right:35px;
+}
+
+.image-right{
+    float:right;
+    margin-left:35px;
+}
+
+.image-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+
+    background:rgba(0,0,0,.6);
+
+    padding:10px;
+    text-align:center;
+
+    font-size:1rem;
+    letter-spacing:2px;
+    font-family:"Cinzel", serif;
+}
+
+/* ======================= */
+/* QUOTE BLOCK */
+/* ======================= */
+
+.quote{
+
+    margin:70px 0;
+
+    padding:40px;
+
+    border-left:3px solid var(--gold);
+
+    background:rgba(0,0,0,.25);
+
+    font-style:italic;
+
+    font-size:2rem;
+
+    color:var(--paper);
+}
+
+/* ======================= */
+/* DIVIDER */
+/* ======================= */
+
+.divider{
+    text-align:center;
+    margin:80px 0;
+    opacity:.6;
+    font-size:2rem;
+    color:var(--gold);
+}
+
+/* ======================= */
+/* FOOTER */
+/* ======================= */
+
+footer{
+    padding:50px;
+    text-align:center;
+    border-top:1px solid rgba(200,165,106,.15);
+    background:rgba(0,0,0,.4);
+}
+
+footer p{
+    letter-spacing:2px;
+    opacity:.8;
+}
+
+/* ======================= */
+/* SCROLLBAR */
+/* ======================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:black;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    .chapter-paper{
+        padding:40px 25px;
+    }
+
+    .chapter-content{
+        font-size:1.3rem;
+        line-height:2;
+    }
+
+    .image-left,
+    .image-right{
+
+        float:none;
+
+        width:100%;
+        height:420px;
+
+        margin:0 0 35px 0;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- ======================= -->
+<!-- NAV -->
+<!-- ======================= -->
+
+<nav>
+
+    <div class="nav-inner">
+
+        <div class="logo">
+            Esther
+        </div>
+
+        <a href="/index.html" class="back-btn">
+            ← RETURN TO ARCHIVES
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- ======================= -->
+<!-- HERO -->
+<!-- ======================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="chapter-number">
+            CHAPTER II
+        </div>
+
+        <h1>Settlement in the Caribbean</h1>
+
+        <p>
+            Absent father, depressed mother, new expectations on the horizon... will Essie handle all of that?
+        </p>
+
+    </div>
+
+</header>
+
+<!-- ======================= -->
+<!-- CHAPTER CONTENT -->
+<!-- ======================= -->
+
+<section class="chapter-wrapper">
+
+    <article class="chapter-paper">
+
+        <div class="chapter-content">
+
+            <div class="image-left">
+                <div class="image-caption">
+                    ESTHER AS A... PIRATE?
+                </div>
+
+            </div>
+
+            <p>
+                Moving to the Caribbean from London was a huge step for Eleanor’s family as much as for herself too considering she was only six years old at the time. 
+            </p>
+
+            <p>
+                They were financially stable, better than before even - thanks to Nicholas’s new position. Even though they did not know anyone when moving, obviously, their family name gained lots of respect very quickly for the very reason i mentioned before. Eleanor had it good. 
+            </p>
+
+            <!-- <div class="quote">
+
+            </div> -->
+
+            <!-- <div class="image-left">
+
+                <div class="image-caption">
+                    ESTHER'S JOURNAL
+                </div>
+
+            </div> -->
+
+            <p>
+                At this moment her father was rarely every home, his duties called and each time Salazar called for him in order to set sail - he was usually absent for at least couple of weeks at a time. As a result, Eleanor would be left home with her mother. In theory one could say it’s a perfect opportunity to fix the poor relationship of a mother and daughter since the main obstacle wasn’t present at home. Unfortunately that was not the case. 
+            </p>
+
+            <p>
+                Zofia was already starting to feel very poorly mentally back in London and now her issues were only getting worse, she did not pursue the idea of bonding with her child like she wanted to all that time ago because she was simply not able to do so. That woman was not able to face her own child due to depression. It felt like pure neglect towards Eleanor, and it would be exactly that if not for one major factor. Zofia didn’t want Eleanor to be alone because she did love that small child nontheless and so she bought a slave woman. Her name was Amara and she was supposed to take place of the daughter’s mother. The one who would actually be there for her. 
+            </p>
+
+            <div class="divider">
+                ☠ ☠ ☠
+            </div>
+
+            <p>
+                Nicholas, of course, wasn’t informed of said fact but didn’t make a fuss about it when he found out eventually. 
+            </p>
+
+            <p>
+                Amara was never treated as a slave or servant by the family, she was more of a housemaid, a nanny maybe. She was very kind to Eleanor, her presence truly took on the role of a mother in the child’s life. Of course, Eleanor didn’t really understand at the time why exactly her real mother didn’t feel up to seeing her, talking to her or spending any time with her. She was way too young to understand her mother’s state but on the other hand it was fine. Amara was there to distract her from all of that and so, Eleanor was happy - but not for long. 
+            </p>
+
+            <p>
+                Her childlike wonder and naivety did not leave her for quite some time, she has always been curious about the world around, about everything she saw. There was a time when her parents truly encouraged it, believing it would only build up on her determination, willingness to achieve things etc. And it did, but it only backfired on them eventually. 
+            </p>
+
+            <p>
+                At the beginning when Eleanor’s father was returning home from his voyages, the girl was extremely excited about it. And not only because her dad was finally home but because it also meant she got to hear what he was doing during the time he was gone. Oh how she adored and loved those moment! When she got to eat dinner together with her father and listen to all the stories he had to tell her. About the sea, the life of a sailor, the battles he fought, the challenges he faced each day on the open waters. Which was only fueling her curiosity further. Honestly, she did not care that the main objective of his was to hunt down pirates, other people. She was too young to understand politics and matters spoken of highly by those who were impacted by them.
+            </p>
+
+            <p>
+                And then came that one moment, a moment when Nicholas realised how invested Eleanor was in all this. “Father, I wish I could sail someday, just like you do!” and those words did it for him. Unfortunately. It caused him to start growing more and more distant from his own child. Each time he started talking to her less and less about the voyages he had been on. One day he stopped completely.
+            </p>
+
+            <p>
+                Their dynamic shifted drastically simply because of the beliefs of most of the world, and thus - her father’s too. He was worried whether Eleanor didnt start going down the wrong path. A woman aboard a ship was the last thing anyone would have liked to happen. It cannot be like this. She serves greater purpose as a child of his, as a child from the higher spheres. 
+            </p>
+
+            <p>
+                He wished he had a son instead of a daughter. It would be more profitable to him, more convienient even. 
+            </p>
+
+            <div class="divider">
+                ☠ ☠ ☠
+            </div>
+
+            <p>
+                Eleanor’s relationship with Amara was very close. The girl would teach her things like reading or writing while the woman would offer other things in exchange such as guidance and overall support alongside understanding. Amara understood Eleanor like no other - both of them were enslaved by the society, although the situation was significantly different. 
+            </p>
+
+            <p>
+                Although Amara understood her, that was also a reason she was trying to make her understand that what she has right now should  be cherished. She wished to make her realise that the current times they lived in weren’t easy for most, for women, for the poor or for the people of color. And for those who do not fit the perfect image of a citizen even slightly. A lot of people would love to be in her place, not to worry about the next day, whether they’ll have food on their plate or not. Amara wanted Eleanor to value her current life even if it wasn’t exactly what she wanted. To fulfill the role which was given to her the moment she was born into this world.  Because in this world, your life was decided upon the moment you were born. 
+            </p>
+
+            <p>
+                That didn’t mean she was scolding Eleanor for her dreams and wishes. That’s the last thing she would have done. Because she knew it better than no other how it felt to be shaped into something society wanted you to be.
+            </p>
+
+            <div class="divider">
+                ☠ ☠ ☠
+            </div>
+
+            <p>
+                When Eleanor was 10-ish her small family already fell apart. Depressed mother who is not able to face her child and a father with huge expectations for the young girl. Pure neglect. Amara was the only close person Eleanor had. Sure - she did have to attend events such as banquets and meet people her age or older, but none of them were like her. No one was able to understand her and she was unable to understand them. But she was forced to smile and carry on, to not ruin the family’s name. 
+            </p>
+
+            <p>
+                Throught the years, Eleanor was slowly starting to believe that maybe everyone around her was right, that she really should cherish the things she had and live the way people expect her to live. Ignoring her inner desires. Because that’s how the world worked back then. 
+            </p>
+
+            <p>
+                But that small fire within her was always there, not ready yet to fade away completely. And just like that, Eleanor would study the nightsky, the stars and what the vast universe had to offer. Astronomy was her way of reaching for that freedom, in a rather metaphoric way but it worked. It gave her closure and it didn’t feel as miserable as it would have otherwise. Also - Amara would sometimes take Eleanor out with her to town in order to buy fruit or other things. That way she was allowing Eleanor to forget about it all even if for a short while. But it kept that fire.
+            </p>
+
+            <p>
+                Where did Amara get money from? - Eleanor’s mother. Yes. Zofia wasn’t a bad woman at all, she never was. She was just ill and unable to get proper help. She would often give Amara some money so she could buy something for herself or save up. Zofia also gave her a small silver cross necklace as a sign of graditude for watching over Eleanor so well, even if Amara wasn’t familiar with her religion she accepted the gift kindly. 
+            </p>
+
+            <p>Zofia said the God would watch over her now.</p>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- ======================= -->
+<!-- FOOTER -->
+<!-- ======================= -->
+
+<footer>
+
+    <p>
+        All lore created by <b>yuxin</b> • Made by Wafelq 2026
+    </p>
+
+</footer>
+
+</body>
+</html>

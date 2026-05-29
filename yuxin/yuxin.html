@@ -21,7 +21,7 @@
             <div class="window-buttons">
                 <span class="btn min"></span>
                 <span class="btn max" onclick="openSection('sekcja-etc')"></span>
-                <span class="btn close" onclick="openSection('sekcja-zycie')"></span>
+                <span class="btn close" onclick="openSection('kisses_popup'), openSection('swiat_popup')"></span>
             </div>
         </header>
 
@@ -32,7 +32,7 @@
                         <button onclick="openSection('sekcja-muzyka'), openSection('piraci_dancing')" id="btn-muzyka">🎵 Muzyka</button>
                         <button onclick="openSection('sekcja-gry')" id="btn-gry">💿 GRY</button>
                         <button onclick="openSection('sekcja-jedzonko')" id="btn-jedzonko">🍜 Jedzonko</button>
-                        <button onclick="openSection('sekcja-artysci')" id="btn-artysci">🎨 Projekty (tba)</button>                        
+                        <button onclick="openSection('sekcja-artysci')" id="btn-artysci">🎨 Projekty (WIP)</button>                        
                     </div>
             </div>
 
@@ -44,17 +44,22 @@
                 </p>
                 ੈ✩‧₊˚ The world's still the same, there's just less in it.
                 <p>
-                    <i>Krótko o mnie:</i> <br>Halo tu... <b>Domi</b> (she/they), znana także jako <a href="https://www.instagram.com/yuuxi_n/">"yuxin"</a>, mam 20 lat i tworze ładne (według mojego chłopa) rzeczy przez większość życia a w internecie działam od ok. 9 lat.
+                    <i>Krótko o mnie:</i> <br>Halo tu... <b>Domi</b> (she/they), znana także jako <a href="https://www.instagram.com/yuuxi_n/">"yuxin"</a>, mam 20 lat (rocznik 06) i tworze ładne (według mojego chłopa) rzeczy przez większość życia a w internecie działam od ok. 9 lat.
                 </p>
-                    Mam dwa pieski: Homera i Alwina (yorki), ten pierwszy większy drugi mniejszy, oba równie głupie, kocham je tak samo (no może Homera bardziej).
                 <p>
-                    <!-- <img src="./assets/img/icons/brokatowy_garfield_super.gif" class="float-right" alt="Ilustracja"> -->
-                    Kocham moich przyjaciół nad życie!! <i>(Pozdro Hubert, Magda, Ania, Kuba... Mateusz 🙄)</i>
+                    Uwielbiam "Piratów z Karaibów" (ale tylko części 1-3, reszta to gówno dzięki pozdro), serie "Attack on Titan" i wiele innych!! (zajrzyjcie do zakładki "Filmy")
                 </p>
+                    Mam dwa pieski: Homera i Alwina (yorki), ten pierwszy większy drugi mniejszy, oba równie głupie, kocham je tak samo (no może Homera bardziej). 
+                <p><img src="./assets/img/post/homer.png" class="float-left" alt="Ilustracja">
+                    <!-- <img src="./assets/img/icons/brokatowy_garfield_super.gif" class="float-right" alt="Ilustracja"> -->
+                    Kocham pistacje (wszystko co z nimi związane) i moich przyjaciół nad życie!! <i>(Pozdro Hubert, Magda, Ania, Kuba... Mateusz 🙄)</i>        
+                </p><img src="./assets/img/post/brzuch-boli-od-pizzy.gif" width="100px" class="float-right" alt="Ilustracja">
 
-                <h2>JEBAĆ IGORA KABLEM BEZPRZEWODOWYM.</h2>
+                
 
                 <p>Strona jest w budowie! Odwiedź mnie tutaj od czasu do czasu!!</p>
+
+                <small><s>JEBAĆ IGORA KABLEM BEZPRZEWODOWYM.</s></small>
             </article>
         </div>
 
@@ -80,7 +85,7 @@
                         <li>Koncertyy</li>
                     </ul>
 
-                    Kim jestem? Gówno, odpowiedź to gówno.
+                    Gówno, odpowiedź to gówno.
                 </div>
             </div>
 
@@ -96,7 +101,26 @@
                 </div>
             </div>
 
-            <div class="side-window" id="sekcja-zycie">
+  
+            <div class="side-window" id="swiat_popup">
+                    <div class="mini-window-bar">
+                        <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">🌐<i>Jesteś dla mnie <b>CAŁYM ŚWIATEM</b> - Mateusz</i></marquee>
+                        <span class="mini-close" onclick="closeWindow(this)">✕</span>
+                    </div>
+                    <div class="mini-content">
+                        Hej patrz to ty!!
+                        
+                        <img src="./assets/img/icons/Rotating_globe.gif">
+                        
+                        Hej Domi, kocham Cię nad życie!! Życie jest trudne ale gdy ty w nim jesteś to każda trudność i przeszkoda jest tego warta 👋😁💕 <br>
+                        Mam nadzieję że będziemy dla siebie dobrzy i będziemy mieli spokojną i miłą przyszłość!! Zasługujesz na najlepszego chłopa na świecie, więc takim będę. Ochronię Cię od wszystkiego złego i zaprowadzę Cię do spokoju świętego 😇😌
+
+                        <img src="./assets/img/icons/brokatowy_garfield_super.gif">
+
+                    </div>
+            </div>    
+
+            <div class="side-window" id="kisses_popup">
                 <div class="mini-window-bar">
                     <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">⚠💕 KISSES ALERT ⚠💕 KISSES ALERT ⚠💕 KISSES ALERT ⚠💕 KISSES ALERT ⚠💕 KISSES ALERT ⚠💕 </marquee>
                     <span class="mini-close" onclick="closeWindow(this)">✕</span>
@@ -150,6 +174,7 @@
                         
                         <img src="./assets/img/post/barbossa_jam.gif">
                         
+                        <a href="https://open.spotify.com/track/47Slg6LuqLaX0VodpSCvPt?si=ee3793bafa3a40de">HEJ TUTAJ PIOSENKA O TOBIE KLIKNIJ W TEN LINK DZIEKI POZDRO</a>
                     </div>
                 </div>
             </div>
@@ -224,6 +249,7 @@
 
                     <h2 class="section-title">😳🥞 yummers</h2>
                     <ol>
+                        <li>Pistacje / lody pistacjowe / ...wszystko co pistacjowe!!! (jebać sezonuwy)</li>
                         <li>Naleśniki z serkiem i dżemem</li>
                         <li>Naleśniki z twarożku</li>
                         <li>Pierogi ruskie</li>
@@ -238,20 +264,37 @@
                 </div>
                 <div class="mini-content">           
                     
+                    <h2 class="section-title">Jack Sparrow</h2>
+                    Jack Sparrow (scena z pierwszego filmu) w moim stylu!
+                    <img width="300px" src="./assets/img/post/jack_yuxin.jpg">
+
+                    <h2 class="section-title">Dezy 🎵</h2>
+                    Plakat piosenki "Myśli" - Dezydery (dawniej Masterczułek). 
+                    <img width="300px" src="./assets/img/post/dezy.png">
+
                     <h2 class="section-title">Naklejki</h2>
-                    Naklejki polskich streamerów z serwera <b>QSMP2</b>.<br><br>
-                    Kolekcja <b>"Polska Husaria"</b>.
+                    Naklejki polskich streamerów z serwera <b>QSMP2</b>.<br>
+                    Kolekcja <b>"Polska Husaria"</b>.<br><br>
                     <img width="300px" src="./assets/img/post/naklejka_graf.png">                  
                     <img width="300px" src="./assets/img/post/naklejka_ewron.png">
                     <img width="300px" src="./assets/img/post/naklejka_nexe.png">
                     <img width="300px" src="./assets/img/post/naklejka_multi.png">
 
-                    <h2 class="section-title">Animacje</h2>                    
-                    <iframe width="300" height="300" src="https://www.youtube.com/embed/gi5dgjvnjl8?si=CaxQ4Mgr5jC7jyLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    By Yuxin (rysunki) & Wafelq (animation, editing) 
+                    <h2 class="section-title">Essie!!</h2>
+                    Projekt/refka postaci "Esther". <br><br>
+                    <img width="300px" src="./assets/img/post/essiesketchref.png"><br>  
+                    Essie w wieku 19 lat.<br><br>
+                    <img width="300px" src="./assets/img/post/w.png">
 
-                    <h2 class="section-title">Grafiki</h2>    
-                    <img width="300px" src="https://media.discordapp.net/attachments/1486112377685676064/1501310280049627237/autoportret.png?ex=6a0c1667&is=6a0ac4e7&hm=d0cdbf509eb644752fe7546a1bb57b9b4117daac9561bc3e7c073e54f363a680&=&format=webp&quality=lossless&width=1192&height=1668">        
+                    <h2 class="section-title">Animacje</h2>
+                    "Gra w kalambury" - by Yuxin (rysunki) & Wafelq (animation, editing).<br><br>  
+                    <iframe width="300" height="300" src="https://www.youtube.com/embed/gi5dgjvnjl8?si=CaxQ4Mgr5jC7jyLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+
+                    <h2 class="section-title">Grafiki</h2>
+                    Autoportret - yuxin <br><br>
+                    <img width="300px" src="./assets/img/post/autoportret.png">                
+
                 </div>
             </div>
         </div>
@@ -277,6 +320,6 @@
         </footer>
     </div>
 
-    <img src="./assets/img/post/pirate-flag-25.gif"> <img src="./assets/img/post/its-a-pirates-likes-for-me.gif"> <img src="./assets/img/post/rum.gif">
+    <img src="./assets/img/post/pirate-flag-25.gif"> <img src="./assets/img/post/its-a-pirates-likes-for-me.gif"> <img src="./assets/img/post/rum.gif" width="400px">
 </body>
 </html>
