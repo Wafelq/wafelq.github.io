@@ -193,19 +193,26 @@ nav{
 /* LEFT SIDE */
 /* ========================= */
 
-.character-image-esther{
+.character-image{
 
     width:100%;
-    height:650px;
-
-    background:url("https://wafelq.github.io/esther/assets/img/essie.jpg");
-
-    background-size:cover;
-    background-position:center;
+    /* height:650px; */
 
     border:1px solid rgba(200,165,106,.25);
 
     position:relative;
+
+    overflow:hidden;
+}
+
+.character-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 }
 
 .status-badge{
@@ -532,7 +539,7 @@ footer p{
 <!-- CHARACTER SHEET -->
 <!-- ========================= -->
 
-<section class="character-wrapper">
+<section class="character-wrapper" id="esther">
 
     <div class="character-sheet">
 
@@ -540,7 +547,13 @@ footer p{
 
         <div>
 
-            <div class="character-image-esther">
+            <div class="character-image">
+
+                <img
+                    height="650px"
+                    src="https://wafelq.github.io/esther/assets/img/essie.jpg"
+                    alt="Esther"
+                >
 
                 <div class="status-badge">
                     ALIVE
@@ -556,6 +569,20 @@ footer p{
 
                 <div class="bounty">
                     100£
+                </div>
+
+            </div>
+            <br>
+            <div class="character-image">
+
+                <img
+                    height="650px"
+                    src="/assets/img/eleonor.png"
+                    alt="Esther"
+                >
+
+                <div class="status-badge">
+                    (FKA) Eleanor
                 </div>
 
             </div>
@@ -681,6 +708,155 @@ footer p{
                         </div>
 
                         True(er) friend • Member of crew
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================= JACK ================================================== -->
+
+<section class="character-wrapper" id="jack">
+
+    <div class="character-sheet">
+
+        <!-- LEFT -->
+
+        <div>
+
+            <div class="character-image">
+
+                <img
+                    height="450px"
+                    src="/assets/img/jack_yuxin_2.jpg"
+                    alt="Esther"
+                >
+
+                <div class="status-badge">
+                    ALIVE
+                </div>
+
+            </div>
+
+            <div class="wanted">
+
+                <div class="wanted-title">
+                    WANTED BOUNTY
+                </div>
+
+                <div class="bounty">
+                    100£
+                </div>
+
+            </div>
+
+            <br>
+            <div class="character-image">
+
+                <img
+                    height="650px"
+                    src="/assets/img/jack_yuxin.jpg"
+                    alt="Esther"
+                >
+
+                <div class="status-badge">
+                    Jacek Wróbel
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="character-info">
+
+            <h2>Jack</h2>
+
+            <div class="alias">
+                Jack Sparrow • "Jackie"
+            </div>
+
+            <!-- INFO GRID -->
+
+            <div class="info-grid">
+
+                <div class="info-box">
+
+                    <h4>AGE</h4>
+                    <p>39 • (born: 09.06.1689)</p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <h4>ROLE</h4>
+                    <p>Captain</p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <h4>SHIP</h4>
+                    <p>The Black Pearl</p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <h4>ORIGIN</h4>
+                    <p>Born on a pirate ship in a typhoon (fr)</p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <h4>WEAPON</h4>
+                    <p>Sword & pistol</p>
+
+                </div>
+
+            </div>
+
+            <!-- DESCRIPTION -->
+
+            <div class="description">
+
+                Jack Sparrow was a legendary pirate of the Seven Seas and the irreverent trickster of the Caribbean. <br> 
+                A captain of equally dubious morality and sobriety, a master of self-promotion and self-interest, he fought a constant and losing battle with his own best tendencies while living the pirate's life. Sparrow may be the best or worst pirate (depending on whose opinion to take into account). <br> 
+                And was the quickest to seize the moment and make it his own; whether by cause and careful planning or mere accident was a matter of debate, but the results were the same and always different.
+            </div>
+
+            <!-- QUOTE -->
+
+            <div class="quote">
+
+                "Gentlemen, m'lady...you will always remember this as the day that you almost caught: <b>Captain</b> Jack Sparrow!"
+
+            </div>
+
+            <!-- RELATIONSHIPS -->
+
+            <div class="relationships">
+
+                <h3>RELATIONSHIPS</h3>
+
+                <div class="relationship-list">
+
+                    <div class="relationship">
+
+                        <div class="relationship-name">
+                            Esther
+                        </div>
+
+                        Mutual obsession • It's complicated 
 
                     </div>
 

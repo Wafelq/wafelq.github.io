@@ -1,464 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="chapter-content">
 
-<title>The Black Tide • Chapter I</title>
+<figure class="chapter-image right">
+    <img
+        width="200px"
+        src="./assets/img/fish_piraci_background.gif"
+        alt="Port of Tortuga"
+    >
+    
+    <figcaption class="image-caption">
+        THE PORT OF LONDON (fr)
+    </figcaption>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pirata+One&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+</figure>
 
-<style>
+<p>
+    Eleanor Mira Arledge was born in London on 10th November of 1693. That’s related to the fact that originally her father is british and has lived there his entire life while her mother is polish and moved there with him prior to giving birth to their daughter. 
+</p>
 
-:root{
-    --gold:#c8a56a;
-    --paper:#dbc6a3;
-    --text:#f3e8d0;
-    --dark:#0d0a08;
-    --wood:#1a120d;
-}
+<p>
+    Her relationship with her parents was nearly perfect, their family was wealthy due to her father’s social status - which was higher than a common’s person - he had a lot of respect from the people around, his reputation standing strong within the community of London. Thanks to all of these factors Eleanor always had everything she wanted, every single thing any kid could only dream of - she was able to have it. 
+</p>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<p>
+    But most importantly, her parents loved her and cherished her like a golden child she was. Not many could afford such childhood during these times, considering the communal poverty. Her curiosity about the world surrounding her was always encouraged by her parents, which is quite obvious for a child - to ask many questions and overall be interested about anything which seemed new, yet Eleanor has always been a child who asked more questions than other kids. One could say that she was yearning to see and know anything she could ever since being young, and that would be true. 
+</p>
 
-html{
-    scroll-behavior:smooth;
-}
+    <!-- <div class="quote">
 
-body{
-    background:
-        linear-gradient(rgba(0,0,0,.83), rgba(0,0,0,.88)),
-        url("https://wafelq.github.io/esther/assets/img/St_Albans_Deptford.jpg");
+    </div> -->
 
-    background-size:cover;
-    background-attachment:fixed;
-    color:var(--text);
-    font-family:"Cormorant Garamond", serif;
-    overflow-x:hidden;
-}
+    <!-- <div class="image-left">
 
-/* ======================= */
-/* NAVIGATION */
-/* ======================= */
-
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:999;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid rgba(200,165,106,.2);
-}
-
-.nav-inner{
-    width:90%;
-    margin:auto;
-    padding:18px 0;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-family:"Pirata One", cursive;
-    color:var(--gold);
-    font-size:2rem;
-}
-
-.back-btn{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid rgba(200,165,106,.3);
-    padding:10px 18px;
-    transition:.3s;
-    font-family:"Cinzel", serif;
-    letter-spacing:1px;
-}
-
-.back-btn:hover{
-    background:var(--gold);
-    color:black;
-}
-
-/* ======================= */
-/* HERO */
-/* ======================= */
-
-.hero{
-    min-height:60vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    padding:120px 20px 80px;
-}
-
-.hero-content{
-    max-width:900px;
-}
-
-.chapter-number{
-    color:var(--gold);
-    letter-spacing:5px;
-    margin-bottom:15px;
-    font-family:"Cinzel", serif;
-}
-
-.hero h1{
-    font-family:"Pirata One", cursive;
-    font-size:6rem;
-    color:var(--gold);
-    margin-bottom:25px;
-    text-shadow:0 0 30px rgba(0,0,0,.7);
-}
-
-.hero p{
-    font-size:1.5rem;
-    line-height:1.8;
-    opacity:.9;
-}
-
-/* ======================= */
-/* ARTICLE */
-/* ======================= */
-
-.chapter-wrapper{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding-bottom:120px;
-}
-
-.chapter-paper{
-
-    background:
-        linear-gradient(rgba(16,11,8,.93), rgba(12,8,5,.95)),
-        url("assets/parchment-placeholder.jpg");
-
-    background-size:cover;
-
-    border:1px solid rgba(200,165,106,.2);
-
-    padding:90px;
-
-    box-shadow:
-        0 0 60px rgba(0,0,0,.6),
-        inset 0 0 80px rgba(0,0,0,.35);
-}
-
-/* ======================= */
-/* TEXT */
-/* ======================= */
-
-.chapter-content{
-    font-size:1.55rem;
-    line-height:2.2;
-}
-
-.chapter-content p{
-    margin-bottom:40px;
-}
-
-.chapter-content::first-letter{
-    font-size:5rem;
-    float:left;
-    line-height:.9;
-    padding-right:12px;
-    color:var(--gold);
-    font-family:"Pirata One", cursive;
-}
-
-/* ======================= */
-/* IMAGES */
-/* ======================= */
-
-.image-left,
-.image-right{
-
-    width:320px;
-    height:440px;
-
-    background:url("https://wafelq.github.io/esther/assets/img/fish_piraci_background.gif");
-    background-size:cover;
-    background-position:center;
-
-    border:1px solid rgba(200,165,106,.25);
-
-    padding:12px;
-
-    position:relative;
-
-    margin-bottom:20px;
-}
-
-.image-left{
-    float:left;
-    margin-right:35px;
-}
-
-.image-right{
-    float:right;
-    margin-left:35px;
-}
-
-.image-caption{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-
-    background:rgba(0,0,0,.6);
-
-    padding:10px;
-    text-align:center;
-
-    font-size:1rem;
-    letter-spacing:2px;
-    font-family:"Cinzel", serif;
-}
-
-/* ======================= */
-/* QUOTE BLOCK */
-/* ======================= */
-
-.quote{
-
-    margin:70px 0;
-
-    padding:40px;
-
-    border-left:3px solid var(--gold);
-
-    background:rgba(0,0,0,.25);
-
-    font-style:italic;
-
-    font-size:2rem;
-
-    color:var(--paper);
-}
-
-/* ======================= */
-/* DIVIDER */
-/* ======================= */
-
-.divider{
-    text-align:center;
-    margin:80px 0;
-    opacity:.6;
-    font-size:2rem;
-    color:var(--gold);
-}
-
-/* ======================= */
-/* FOOTER */
-/* ======================= */
-
-footer{
-    padding:50px;
-    text-align:center;
-    border-top:1px solid rgba(200,165,106,.15);
-    background:rgba(0,0,0,.4);
-}
-
-footer p{
-    letter-spacing:2px;
-    opacity:.8;
-}
-
-/* ======================= */
-/* SCROLLBAR */
-/* ======================= */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:black;
-}
-
-::-webkit-scrollbar-thumb{
-    background:var(--gold);
-}
-
-/* ======================= */
-/* RESPONSIVE */
-/* ======================= */
-
-@media(max-width:900px){
-
-    .hero h1{
-        font-size:4rem;
-    }
-
-    .chapter-paper{
-        padding:40px 25px;
-    }
-
-    .chapter-content{
-        font-size:1.3rem;
-        line-height:2;
-    }
-
-    .image-left,
-    .image-right{
-
-        float:none;
-
-        width:100%;
-        height:420px;
-
-        margin:0 0 35px 0;
-    }
-
-}
-
-</style>
-</head>
-<body>
-
-<!-- ======================= -->
-<!-- NAV -->
-<!-- ======================= -->
-
-<nav>
-
-    <div class="nav-inner">
-
-        <div class="logo">
-            Esther
-        </div>
-
-        <a href="https://wafelq.github.io/esther/index.html" class="back-btn">
-            ← RETURN TO ARCHIVES
-        </a>
-
+    <div class="image-caption">
+        ESTHER'S JOURNAL
     </div>
 
-</nav>
+    </div> -->
 
-<!-- ======================= -->
-<!-- HERO -->
-<!-- ======================= -->
+<p>
+    Eleanor was treated the way she was supposed to be being her age. The aristocratic life wasn’t influencing her the way it does later, and it’s the only moment in her childhood when she was able to be just a child. In theory, she had it better than most children but on the other hand, did she really? 
+</p>
 
-<header class="hero">
+<p>
+    Her father wasn’t keen on the entire situation with pirates during these times - as most of the society honestly. They influenced the local economy and the market of the whole world which wasn’t good for the authorities and people of the crown itself. 
+</p>
 
-    <div class="hero-content">
+<p>
+    Many wished to get rid of these scoundrels and he was one of them. His views were reflecting on his child in a lot of ways, some more subtle than others. Yet the goal was obvious, that man wanted Eleanor to understand and see the world the way he did even if his ideas were questionable at times. One of the common things he did in order to achieve that was the routine of attending public executions in London - where it was a frequent event to occure. 
+</p>
 
-        <div class="chapter-number">
-            CHAPTER I
-        </div>
+<p>
+    Usually children are very susceptible to anything their parents are willing to teach them but this time around it was quite different. Bringing a barely five year old child to public hangings was not the best idea of his to influence her with his propangda - obviously a kid that young is going to be scared of the mere fact of seeing people die in front of her own very eyes. 
+</p>
 
-        <h1>Life in London</h1>
+<p>
+    It didn’t make her hate pirates, it just scared her, she was terrified - standing there with her father in front of the gallows and watching all of those ‘innocent’ people hang and choke to their deaths. Even though her father spoke to her during these so called events, she didn’t want to listen, the “comfort” of the person who was supposed to love her endlessly did not matter as she questioned herself and those who were reponsible for it.
+</p>
 
-        <p>
-            Beginning of Esther's story, great but troublesome family versus dream of becoming free and independent. Familiar pain or new good?<br>
-            <small>Painting in the background by <b>John Cleveley the Elder</b></small>
-        </p>
+<div class="divider">
+    ☠ ☠ ☠
+</div>
 
-    </div>
+<p>
+    Why were they being killed? Father said they were bad people, but what exactly make a person so bad that it leads them to their death which they cannot even fight against? How can one decide upon someone else’s life like that when mother said that it’s God’s responsbility to do so. So why were people doing it instead? Those were the questions which are going to be stuck in her head for a long time from now on. Things she had heard from her mother were coliding with everything she had heard from her dad. 
+</p>
 
-</header>
+<p>
+    It only led to further complications between them all, subtle ones - barely visible yet they were definitely there. Eleanor’s mother who wished to raise her own child the way she would like her to be, basing on her own childhood back in Poland which lacked a lot of things she could provide now for her daughter - unable to do so. Unfortunately the world was male-centric, women’s opinions never truly mattered within the society, it was the same for those who were bounded with a man by a promise of endless devotion - the so called marriage. Said partnership was rarely ever done because of honest love, oh no, maybe for those who belonged to the lower social spheres. 
+</p>
 
-<!-- ======================= -->
-<!-- CHAPTER CONTENT -->
-<!-- ======================= -->
+<p>
+    For aristocrats it was a privilege they were never able to afford. Almost always it was just a good bussines, one which was supposed to bring profits for both families. So her mother was starting to get devastated because of the simple fact that she was not able to say anything about the ways her husband was using to “shape” the person which was their very own daughter. Taking a child to public executions was something she was strictly against as a mother but yet again, the man had the upper hand - she couldn’t do much. She did feel helpless but most certainly she was mad at herself - that woman loved her kid endlessly like every mother should. And watching her being influenced by such awful aspects of life which she shouldn’t even be aware of at this point of her life, was starting to eat her from inside out slowly. But she stayed quiet.
+</p>
 
-<section class="chapter-wrapper">
-
-    <article class="chapter-paper">
-
-        <div class="chapter-content">
-
-            <div class="image-right">
-
-                <img src="assets/tortuga.jpg" alt="Port of Tortuga">
-
-                <div class="image-caption">
-                    THE PORT OF LONDON (fr)
-                </div>
-
-            </div>
-
-            <p>
-                Eleanor Mira Arledge was born in London on 10th November of 1693. That’s related to the fact that originally her father is british and has lived there his entire life while her mother is polish and moved there with him prior to giving birth to their daughter. 
-            </p>
-
-            <p>
-                Her relationship with her parents was nearly perfect, their family was wealthy due to her father’s social status - which was higher than a common’s person - he had a lot of respect from the people around, his reputation standing strong within the community of London. Thanks to all of these factors Eleanor always had everything she wanted, every single thing any kid could only dream of - she was able to have it. But most importantly, her parents loved her and cherished her like a golden child she was. Not many could afford such childhood during these times, considering the communal poverty. Her curiosity about the world surrounding her was always encouraged by her parents, which is quite obvious for a child - to ask many questions and overall be interested about anything which seemed new, yet Eleanor has always been a child who asked more questions than other kids. One could say that she was yearning to see and know anything she could ever since being young, and that would be true. 
-            </p>
-
-            <!-- <div class="quote">
-
-            </div> -->
-
-            <!-- <div class="image-left">
-
-                <div class="image-caption">
-                    ESTHER'S JOURNAL
-                </div>
-
-            </div> -->
-
-            <p>
-                Eleanor was treated the way she was supposed to be being her age. The aristocratic life wasn’t influencing her the way it does later, and it’s the only moment in her childhood when she was able to be just a child. In theory, she had it better than most children but on the other hand, did she really? 
-            </p>
-
-            <p>
-                Her father wasn’t keen on the entire situation with pirates during these times - as most of the society honestly. They influenced the local economy and the market of the whole world which wasn’t good for the authorities and people of the crown itself. Many wished to get rid of these scoundrels and he was one of them. His views were reflecting on his child in a lot of ways, some more subtle than others. Yet the goal was obvious, that man wanted Eleanor to understand and see the world the way he did even if his ideas were questionable at times. One of the common things he did in order to achieve that was the routine of attending public executions in London - where it was a frequent event to occure. 
-            </p>
-
-            <p>
-                Usually children are very susceptible to anything their parents are willing to teach them but this time around it was quite different. Bringing a barely five year old child to public hangings was not the best idea of his to influence her with his propangda - obviously a kid that young is going to be scared of the mere fact of seeing people die in front of her own very eyes. It didn’t make her hate pirates, it just scared her, she was terrified - standing there with her father in front of the gallows and watching all of those ‘innocent’ people hang and choke to their deaths. Even though her father spoke to her during these so called events, she didn’t want to listen, the “comfort” of the person who was supposed to love her endlessly did not matter as she questioned herself and those who were reponsible for it.
-            </p>
-
-            <div class="divider">
-                ☠ ☠ ☠
-            </div>
-
-            <p>
-                Why were they being killed? Father said they were bad people, but what exactly make a person so bad that it leads them to their death which they cannot even fight against? How can one decide upon someone else’s life like that when mother said that it’s God’s responsbility to do so. So why were people doing it instead? Those were the questions which are going to be stuck in her head for a long time from now on. Things she had heard from her mother were coliding with everything she had heard from her dad. 
-            </p>
-
-            <p>
-                It only led to further complications between them all, subtle ones - barely visible yet they were definitely there. Eleanor’s mother who wished to raise her own child the way she would like her to be, basing on her own childhood back in Poland which lacked a lot of things she could provide now for her daughter - unable to do so. Unfortunately the world was male-centric, women’s opinions never truly mattered within the society, it was the same for those who were bounded with a man by a promise of endless devotion - the so called marriage. Said partnership was rarely ever done because of honest love, oh no, maybe for those who belonged to the lower social spheres. 
-            </p>
-
-            <p>
-                For aristocrats it was a privilege they were never able to afford. Almost always it was just a good bussines, one which was supposed to bring profits for both families. So her mother was starting to get devastated because of the simple fact that she was not able to say anything about the ways her husband was using to “shape” the person which was their very own daughter. Taking a child to public executions was something she was strictly against as a mother but yet again, the man had the upper hand - she couldn’t do much. She did feel helpless but most certainly she was mad at herself - that woman loved her kid endlessly like every mother should. And watching her being influenced by such awful aspects of life which she shouldn’t even be aware of at this point of her life, was starting to eat her from inside out slowly. But she stayed quiet.
-            </p>
-
-            <p>
-                Though Eleanor also experienced many, purely cultural events such as theatre plays or other pleasures only artistocrats could usually afford. “The Rover” was her favourite one of all, a story which included a fair judgement of men who were as flawed as any other person in the world and a fiery spirit of women who could be as confident and brave as a man. She did see that play only once as a child though, her father wasn’t a fan of it. 
-            </p>
-
-
-        </div>
-
-    </article>
-
-</section>
-
-<!-- ======================= -->
-<!-- FOOTER -->
-<!-- ======================= -->
-
-<footer>
-
-    <p>
-        All lore created by <b>yuxin</b> • Made by Wafelq 2026
-    </p>
-
-</footer>
-
-</body>
-</html>
+<p>
+    Though Eleanor also experienced many, purely cultural events such as theatre plays or other pleasures only artistocrats could usually afford. “The Rover” was her favourite one of all, a story which included a fair judgement of men who were as flawed as any other person in the world and a fiery spirit of women who could be as confident and brave as a man. She did see that play only once as a child though, her father wasn’t a fan of it. 
+</p>
+</div>
