@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Wafelq 2026</title>
+    <title>Koncert Życzeń</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
-    <script src="./assets/script.js"></script> 
+    <script src="./assets/script.js" defer></script>
 </head>
 
 <body>
-  <div id="container">
 
-    <header>
-      ⭐ Koncert życzeń
+<div id="container">
+
+    <header class="window-bar">
+        <div class="window-title">
+            ⭐ Koncert życzeń
+        </div>
+
+        <div class="window-buttons">
+            <span class="window-button">_</span>
+            <span class="window-button">□</span>
+            <span class="window-button close">×</span>
+        </div>
     </header>
+    
 
-    <nav>
-      <a target="_blank" href="https://wafelq.github.io/dreams/dreams.html">Lista</a>
-      <a target="_blank" href="https://wafelq.github.io">Portfolio</a>
-      <a target="_blank" href="https://wafelq.github.io">Strona Główna</a>
-      <a target="_blank" href="https://linktr.ee/wafelq">O mnie</a>
+    <nav class="top-nav">
+        <a href="https://wafelq.github.io/dreams/dreams.html">📜 Lista</a>
+        <a href="https://wafelq.github.io" target="_blank">💻 Portfolio</a>
+        <a href="https://wafelq.github.io" target="_blank">🏠 Strona Główna</a>
+        <a href="https://linktr.ee/wafelq" target="_blank">👤 O mnie</a>
     </nav>
+
+    <div class="window-info">
+        📁 moje_marzenia.txt
+        <span>● ONLINE</span>
+    </div>
 
     <main>
 
-    <div id="sidebar">
-      <h3>📂 Kategorie</h3>
-      <select id="filterCategory" onchange="renderList()">
-        <option value="all">Wszystkie</option>
-      </select>
-    </div>
+        <aside id="sidebar">
 
-    <div id="content">
+            <h3>📂 Kategorie</h3>
+            <div id="categoryButtons"></div>
 
-    <section id="lista">
-      <h2>📜 Lista życzeń / marzenia</h2>
-      <ul id="wishlist"></ul>
-      <hr>
-      <p>
-        POD: Podróże <br />
-        GRY: Gry <br />
-        MAR: Marzenia <br />
-        SPR: Sprzęt <br />
-        RZC: Rzeczy <br />
-        OSB: Osobiste <br />
-        FLM: Filmy <br /> 
-        WYD: Wywiad <br />
-      </p>
-    </section>
 
-    </div>
+            <div class="legend">
+              <strong>Notka:</strong>
+              "Napisałem" tą stronkę przy użyciu AI 💀 dlatego używajcie jej kodu DOWOLNIE.
+            </div>
+        </aside>
+
+        <section id="content">
+
+            <div class="content-header">
+                <div>
+                    <span class="folder-icon">📁</span>
+                    <strong id="current-category">Wszystkie</strong>
+                </div>
+
+                <span id="item-count"></span>
+            </div>
+
+            <div id="wishlist">
+                <!-- JS wstawi tutaj listę -->
+            </div>
+
+        </section>
+
     </main>
 
+    <div class="legend">
+        <strong>Oznaczenia:</strong>
+        POD = Podróże · GRY = Gry · MAR = Marzenia · SPR = Sprzęt ·
+        RZC = Rzeczy · OSB = Osobiste · FLM = Filmy · WYD = Wywiad
+    </div>
+
+    
+
     <footer>
-      © 2026 — Wafelq 💾
+        © 2026 — Wafelq 💾
     </footer>
 
-  </div>
+</div>
+
 </body>
 </html>
