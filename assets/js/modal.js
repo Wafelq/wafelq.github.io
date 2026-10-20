@@ -1,4 +1,4 @@
-console.log("modal.js załadowany");
+console.log("modal.js załadowany kurwaaaa");
 
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");

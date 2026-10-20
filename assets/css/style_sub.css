@@ -128,7 +128,7 @@ h6 {
   background: #192734; 
   z-index: 10;
   display: flex;
-  align-items: center;            /* wyrównanie w pionie, koniec z lataniem */
+  align-items: center;            
   justify-content: space-between;
   gap: 16px;
   padding: 50px 50px;
@@ -136,16 +136,16 @@ h6 {
 
 .site_header h1 {
   margin: 0;
-  font-size: clamp(32px, 6vw, 56px);  /* sam się skaluje na telefonie */
-  font-weight: 800;                   /* teraz zadziała */
+  font-size: clamp(32px, 6vw, 56px);  
+  font-weight: 800;                   
   line-height: 1;
 }
 
 .back_link {
   display: inline-flex;
-  align-items: center;            /* ikona równo z tekstem */
+  align-items: center;            
   gap: 8px;
-  padding: 0;                     /* kasuje globalne padding z reguły a, p, li... */
+  padding: 0;                     
   white-space: nowrap;
 }
 
@@ -167,13 +167,13 @@ h6 {
 
 /* MODAL */
 .modal {
-  display: none;              /* JS zmienia na flex */
+  display: none;              
   position: fixed;
-  inset: 0;                   /* top/right/bottom/left: 0 */
+  inset: 0;                   
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.9);
-  align-items: center;        /* wyśrodkowanie w pionie */
-  justify-content: center;    /* i w poziomie */
+  align-items: center;        
+  justify-content: center;    
   padding: 20px;
 }
 
