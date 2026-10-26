@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "herobrine_article",
+    "title": "Herobrine: historia prawdziwa",
+    "date": "2026-10-24",
+    "file": "articles/herobrine_article.html",
+    "image": "img/post_26.10/img_herobrine.jpg",
+    "imageAlt": "Widok z Minecrafta na mglisty las i wzgórze"
+  },
+  {
+    "slug": "n64-loop",
+    "title": "Nintendo 64 w ruchu",
+    "date": "2026-10-25",
+    "file": "articles/n64-loop.html",
+    "image": "img/post_26.10/n64_spin.gif",
+    "imageAlt": "Animacja obracającej się konsoli Nintendo 64"
+  },
+  {
+    "slug": "hello-world",
+    "title": "Hello World!!",
+    "date": "2026-10-26",
+    "file": "articles/hello-world.html",
+    "image": "img/post_26.10/hamilton_26.10.jpg",
+    "imageAlt": "Grafika z Hamiltonem"
+  }
+]

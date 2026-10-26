@@ -62,7 +62,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #245edb, #3a7bd5);
+  background: linear-gradient(to top, #245edb, #3a7bd5);
   color: white;
   padding: 6px 10px;
   font-weight: bold;
