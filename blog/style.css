@@ -471,8 +471,8 @@ a:focus-visible {
 
 .notice-note {
   padding: 10px;
-  border-left: 3px solid #8dbd4c;
-  background: rgba(255, 255, 255, 0.62);
+  border-left: 3px solid #399ea9;
+  background: #f8feff;
 }
 
 .social-intro {
@@ -520,6 +520,10 @@ a:focus-visible {
 
 .social-links li:nth-child(2) a > span:first-child {
   background: linear-gradient(35deg, #f4a03b, #d64b76, #7854bd);
+}
+
+.social-links li:nth-child(3) a > span:first-child {
+  background: linear-gradient(#0758b5, #1676d2);
 }
 
 .social-handle {
@@ -584,7 +588,7 @@ a:focus-visible {
 
 .article-body h2,
 .article-body h3 {
-  margin: 1.7em 0 0.55em;
+  /* margin: 1.7em 0 0.55em; */
   color: #204d75;
   line-height: 1.35;
 }
@@ -604,9 +608,9 @@ a:focus-visible {
 .article-body blockquote {
   margin: 1.5em 0;
   padding: 12px 17px;
-  border-left: 4px solid #75a939;
+  border-left: 4px solid #399ea9;
   color: #4e6577;
-  background: #eef6e8;
+  background: #e8f3f6;
 }
 
 .article-body img {
@@ -617,10 +621,81 @@ a:focus-visible {
 }
 
 .article-body .post-image {
-  float: left;
   width: min(42%, 320px);
   margin: 4px 20px 12px 0;
 }
+
+/* ===== CITATION JUST LIKE IN WIKIPEDIA AAAAAA ===== */
+
+/* BAZA */
+.article-body .post-figure {
+  --w: 320px;                      /* domyślna szerokość */
+  position: relative;
+  width: min(42%, var(--w));
+  margin: 4px 0 12px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  background: #f8fbfe;
+}
+
+.article-body .post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+/* POZYCJA */
+.article-body .post-figure.left   { float: left;  margin-right: 20px; }
+.article-body .post-figure.right  { float: right; margin-left: 20px; }
+.article-body .post-figure.center {
+  float: none;
+  width: min(100%, 520px);
+  margin: 16px auto;
+}
+
+/* ROZMIAR (opcjonalnie) */
+.article-body .post-figure.small { --w: 220px; }
+.article-body .post-figure.large { --w: 480px; }
+
+/* OPIS (opcjonalny, wystarczy go nie dodawać w HTML) */
+.article-body .post-figure figcaption {
+  padding: 6px 2px 2px;
+  color: #4e6577;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* PRZYCISK POBIERANIA */
+.article-body .post-figure .download {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  background: rgba(10, 50, 90, 0.75);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.article-body .post-figure:hover .download,
+.article-body .post-figure .download:focus-visible {
+  opacity: 1;
+}
+/* na telefonach nie ma hovera, więc przycisk jest widoczny cały czas */
+@media (hover: none) {
+  .article-body .post-figure .download { opacity: 1; }
+}
+
+/* wymuszenie, żeby coś zaczęło się pod obrazkiem */
+.article-body .clear { clear: both; }
+
+/* ===== CITATION JUST LIKE IN WIKIPEDIA AAAAAA ===== */
 
 .article-body::after {
   display: block;
@@ -811,6 +886,15 @@ a:focus-visible {
   .article-body .post-image {
     float: none;
     display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 16px;
+  }
+
+  .article-body .post-figure,
+  .article-body .post-figure.left,
+  .article-body .post-figure.right {
+    float: none;
     width: 100%;
     max-width: 420px;
     margin: 0 auto 16px;

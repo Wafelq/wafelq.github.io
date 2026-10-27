@@ -33,6 +33,11 @@ function createTickerGroup(articles, linked) {
   const group = document.createElement("div");
   group.className = "ticker-group";
 
+  const separator = document.createElement("span");
+    separator.className = "ticker-separator";
+    separator.setAttribute("aria-hidden", "true");
+    separator.textContent = "✦";
+    group.append(separator);
   const welcome = document.createElement("span");
   welcome.textContent = "WITAJ NA MOJEJ STRONIE";
   group.append(welcome);

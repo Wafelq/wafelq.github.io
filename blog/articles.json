@@ -1,10 +1,18 @@
 [
   {
+    "slug": "default",
+    "title": "default_formatting_stuff",
+    "date": "2026-10-27",
+    "file": "articles/default.html",
+    "image": "img/windows_xp_tapeta.jpg",
+    "imageAlt": "Tapeta windowsa XP"
+  },
+  {
     "slug": "herobrine_article",
     "title": "Herobrine: historia prawdziwa",
     "date": "2026-10-24",
     "file": "articles/herobrine_article.html",
-    "image": "img/post_26.10/img_herobrine.jpg",
+    "image": "img/avatars/x360_steve.png",
     "imageAlt": "Widok z Minecrafta na mglisty las i wzgórze"
   },
   {
