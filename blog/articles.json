@@ -1,19 +1,35 @@
 [
   {
+    "slug": "retro",
+    "title": "RETRO - stare ale jare",
+    "date": "2026-10-27",
+    "file": "articles/retro.html",
+    "image": "img/post_27.10/game-cube-intro.gif",
+    "imageAlt": "Intro GameCube'a"
+  },
+  {
+    "slug": "japonski",
+    "title": "わたし わ マテうすーさん です",
+    "date": "2026-10-27",
+    "file": "articles/japonski.html",
+    "image": "img/post_27.10/japan.webp",
+    "imageAlt": "Znaczek japonii type shit"
+  },
+  {
     "slug": "default",
-    "title": "default_formatting_stuff",
+    "title": "✿ Strona testująca formatowanie",
     "date": "2026-10-27",
     "file": "articles/default.html",
     "image": "img/windows_xp_tapeta.jpg",
     "imageAlt": "Tapeta windowsa XP"
   },
   {
-    "slug": "herobrine_article",
-    "title": "Herobrine: historia prawdziwa",
-    "date": "2026-10-24",
-    "file": "articles/herobrine_article.html",
-    "image": "img/avatars/x360_steve.png",
-    "imageAlt": "Widok z Minecrafta na mglisty las i wzgórze"
+    "slug": "hello-world",
+    "title": "Hello World!!",
+    "date": "2026-10-26",
+    "file": "articles/hello-world.html",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Parallax.gif",
+    "imageAlt": "parallaxa z wikipedii"
   },
   {
     "slug": "n64-loop",
@@ -24,11 +40,19 @@
     "imageAlt": "Animacja obracającej się konsoli Nintendo 64"
   },
   {
-    "slug": "hello-world",
-    "title": "Hello World!!",
-    "date": "2026-10-26",
-    "file": "articles/hello-world.html",
-    "image": "img/post_26.10/hamilton_26.10.jpg",
-    "imageAlt": "Grafika z Hamiltonem"
+    "slug": "herobrine_article",
+    "title": "Herobrine: historia prawdziwa",
+    "date": "2026-10-24",
+    "file": "articles/herobrine_article.html",
+    "image": "img/avatars/x360_steve.png",
+    "imageAlt": "Widok z Minecrafta na mglisty las i wzgórze"
+  },
+  {
+    "slug": "zdrodla",
+    "title": "Źródła",
+    "date": "2026-10-23",
+    "file": "articles/sources.html",
+    "image": "https://i.pinimg.com/originals/9e/9b/91/9e9b916e702bdebee34213c22ef8fa94.gif",
+    "imageAlt": "kotki!!!!!!"
   }
 ]

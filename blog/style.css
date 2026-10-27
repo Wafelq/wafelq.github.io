@@ -10,11 +10,12 @@
   font-family: Tahoma, Verdana, Arial, sans-serif;
   color: #26364b;
   background: #b9d8ed;
-  font-synthesis: none;
+  /* font-synthesis: none; */
   --xp-blue: #1676d2;
   --xp-deep-blue: #0758b5;
   --xp-green: #6cae27;
   --panel-border: #a8c9e3;
+  --yellow-text: #ffe682;
   --avatar-img: url("img/avatars/x360_panda.png");
 }
 
@@ -26,8 +27,11 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 34px 20px;
-  background:
-    radial-gradient(ellipse at 15% 15%, rgba(255, 255, 255, 0.75), transparent 34%),
+  background: radial-gradient(
+      ellipse at 15% 15%,
+      rgba(255, 255, 255, 0.75),
+      transparent 34%
+    ),
     linear-gradient(145deg, #d9efff, #a9d0eb 58%, #8ebde0);
   background-attachment: fixed;
 }
@@ -48,7 +52,8 @@ a:focus-visible {
   border: 1px solid #426c9e;
   border-radius: 10px 10px 3px 3px;
   background: #f6f9fc;
-  box-shadow: 0 20px 55px rgba(26, 67, 106, 0.26), 0 2px 4px rgba(25, 60, 93, 0.18);
+  box-shadow: 0 20px 55px rgba(26, 67, 106, 0.26),
+    0 2px 4px rgba(25, 60, 93, 0.18);
 }
 
 .window-titlebar {
@@ -61,7 +66,14 @@ a:focus-visible {
   font-size: 13px;
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 30, 94, 0.6);
-  background: linear-gradient(180deg, #5ca5f5 0%, #267bd9 48%, #1261c3 50%, #438ee4 100%);
+  background: linear-gradient(
+    180deg,
+    #5ca5f5 0%,
+    #267bd9 10%,
+    #0053e1 30%,
+    #026afe 90%,
+    #0043cf 100%
+  );
 }
 
 .window-icon {
@@ -84,11 +96,15 @@ a:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 3px;
   color: white;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1;
-  background: linear-gradient(#75b9fb, #1761bd);
+  background: linear-gradient(
+    #6e97f8 0%, 
+    #0560f4 80%,
+    #033fc0 100%
+    );
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.45);
 }
 
@@ -102,8 +118,12 @@ a:focus-visible {
   padding: 34px 42px;
   overflow: hidden;
   color: white;
-  background:
-    linear-gradient(90deg, rgba(8, 70, 138, 0.86), rgba(15, 115, 186, 0.38) 72%, rgba(35, 120, 170, 0.12)),
+  background: linear-gradient(
+      90deg,
+      rgba(8, 70, 138, 0.86),
+      rgba(15, 115, 186, 0.38) 72%,
+      rgba(35, 120, 170, 0.12)
+    ),
     url("img/windows_xp_tapeta.jpg") center 46% / cover,
     linear-gradient(130deg, #0b73c9, #6cbae8);
 }
@@ -114,13 +134,13 @@ a:focus-visible {
   font-family: "IntegralCF", Tahoma, sans-serif;
   font-size: clamp(37px, 7vw, 68px);
   line-height: 1;
-  letter-spacing: -0.055em;
+  /* letter-spacing: -0.055em; */
   text-decoration: none;
   text-shadow: 0 3px 0 rgba(0, 42, 96, 0.25), 0 5px 16px rgba(0, 31, 81, 0.32);
 }
 
 .site-name span {
-  color: #d0f69a;
+  color: var(--yellow-text);
 }
 
 .masthead p {
@@ -248,7 +268,7 @@ a:focus-visible {
 }
 
 .ticker-group .ticker-item {
-  color: #d8f3a8;
+  color: var(--yellow-text);
   font-weight: 700;
 }
 
@@ -275,8 +295,11 @@ a:focus-visible {
   grid-template-columns: minmax(0, 1fr) 265px;
   gap: 27px;
   padding: 30px;
-  background:
-    radial-gradient(ellipse at 70% 0, rgba(227, 243, 255, 0.8), transparent 52%),
+  background: radial-gradient(
+      ellipse at 70% 0,
+      rgba(227, 243, 255, 0.8),
+      transparent 52%
+    ),
     #f6f9fc;
 }
 
@@ -449,8 +472,6 @@ a:focus-visible {
   line-height: 1.65;
 }
 
-
-
 .avatar {
   display: grid;
   float: left;
@@ -605,6 +626,10 @@ a:focus-visible {
   margin: 0 0 1.15em;
 }
 
+.article-body i {
+  font-style: italic;
+}
+
 .article-body blockquote {
   margin: 1.5em 0;
   padding: 12px 17px;
@@ -629,7 +654,7 @@ a:focus-visible {
 
 /* BAZA */
 .article-body .post-figure {
-  --w: 320px;                      /* domyślna szerokość */
+  --w: 320px; /* domyślna szerokość */
   position: relative;
   width: min(42%, var(--w));
   margin: 4px 0 12px;
@@ -648,8 +673,14 @@ a:focus-visible {
 }
 
 /* POZYCJA */
-.article-body .post-figure.left   { float: left;  margin-right: 20px; }
-.article-body .post-figure.right  { float: right; margin-left: 20px; }
+.article-body .post-figure.left {
+  float: left;
+  margin-right: 20px;
+}
+.article-body .post-figure.right {
+  float: right;
+  margin-left: 20px;
+}
 .article-body .post-figure.center {
   float: none;
   width: min(100%, 520px);
@@ -657,8 +688,12 @@ a:focus-visible {
 }
 
 /* ROZMIAR (opcjonalnie) */
-.article-body .post-figure.small { --w: 220px; }
-.article-body .post-figure.large { --w: 480px; }
+.article-body .post-figure.small {
+  --w: 220px;
+}
+.article-body .post-figure.large {
+  --w: 480px;
+}
 
 /* OPIS (opcjonalny, wystarczy go nie dodawać w HTML) */
 .article-body .post-figure figcaption {
@@ -689,11 +724,15 @@ a:focus-visible {
 }
 /* na telefonach nie ma hovera, więc przycisk jest widoczny cały czas */
 @media (hover: none) {
-  .article-body .post-figure .download { opacity: 1; }
+  .article-body .post-figure .download {
+    opacity: 1;
+  }
 }
 
 /* wymuszenie, żeby coś zaczęło się pod obrazkiem */
-.article-body .clear { clear: both; }
+.article-body .clear {
+  clear: both;
+}
 
 /* ===== CITATION JUST LIKE IN WIKIPEDIA AAAAAA ===== */
 
@@ -762,7 +801,8 @@ a:focus-visible {
   font-weight: 700;
   text-shadow: 0 1px 1px #315d27;
   background: linear-gradient(#80bd46, #3b851d 55%, #4b9b27);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 1px 0 5px rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45),
+    1px 0 5px rgba(0, 0, 0, 0.18);
 }
 
 .start-button span {
