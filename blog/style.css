@@ -134,7 +134,7 @@ a:focus-visible {
   font-family: "IntegralCF", Tahoma, sans-serif;
   font-size: clamp(37px, 7vw, 68px);
   line-height: 1;
-  /* letter-spacing: -0.055em; */
+  letter-spacing: -0.055em;
   text-decoration: none;
   text-shadow: 0 3px 0 rgba(0, 42, 96, 0.25), 0 5px 16px rgba(0, 31, 81, 0.32);
 }
