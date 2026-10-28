@@ -20,32 +20,8 @@
     "title": "✿ Strona testująca formatowanie",
     "date": "2026-10-27",
     "file": "articles/default.html",
-    "image": "img/windows_xp_tapeta.jpg",
-    "imageAlt": "Tapeta windowsa XP"
-  },
-  {
-    "slug": "hello-world",
-    "title": "Hello World!!",
-    "date": "2026-10-26",
-    "file": "articles/hello-world.html",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Parallax.gif",
-    "imageAlt": "parallaxa z wikipedii"
-  },
-  {
-    "slug": "n64-loop",
-    "title": "Nintendo 64 w ruchu",
-    "date": "2026-10-25",
-    "file": "articles/n64-loop.html",
-    "image": "img/post_26.10/n64_spin.gif",
-    "imageAlt": "Animacja obracającej się konsoli Nintendo 64"
-  },
-  {
-    "slug": "herobrine_article",
-    "title": "Herobrine: historia prawdziwa",
-    "date": "2026-10-24",
-    "file": "articles/herobrine_article.html",
-    "image": "img/avatars/x360_steve.png",
-    "imageAlt": "Widok z Minecrafta na mglisty las i wzgórze"
+    "imageAlt": "Wikipedia paralax gif"
   },
   {
     "slug": "zdrodla",
@@ -54,5 +30,13 @@
     "file": "articles/sources.html",
     "image": "https://i.pinimg.com/originals/9e/9b/91/9e9b916e702bdebee34213c22ef8fa94.gif",
     "imageAlt": "kotki!!!!!!"
+  },
+  {
+    "slug": "timeline",
+    "title": "Historia Wafelq'a",
+    "date": "2026-10-27",
+    "file": "articles/historia.html",
+    "image": "img/header_background_1.png",
+    "imageAlt": "ja w muzeum xd"
   }
 ]
