@@ -817,6 +817,31 @@ a:focus-visible {
   background: rgba(4, 54, 127, 0.32);
 }
 
+/* KATAKANA STUFF */
+.romaji {
+  white-space: nowrap;
+  display: block;
+  font-size: 85%;
+}
+
+.kana {
+  font-size: 140%;
+  white-space: nowrap;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: solid #26364b 1px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #26364b;
+}
+
+
+
 /* ===== TIMELINE ===== */
 
     /* The actual timeline (the vertical ruler) */
