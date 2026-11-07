@@ -1,5 +1,13 @@
 [
   {
+    "slug": "polishcore",
+    "title": "POLISHCORE - Polska w odmętach umysłu",
+    "date": "2026-11-07",
+    "file": "articles/polishcore.html",
+    "image": "https://pliki.portalspozywczy.pl/i/02/95/74/029574_r0_940.jpg",
+    "imageAlt": "Logo Zabki do 2014 r."
+  },
+  {
     "slug": "mniejsze_zlo",
     "title": "Mniejsze zło - nie istnieje.",
     "date": "2026-10-27",
